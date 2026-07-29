@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="zh-CN" data-theme="light">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>避坑指南 — 什么时候别用 AI — ToolHub</title>
+<meta name="description" content="带观点的 AI 避坑清单：什么时候别用大模型、别做 RAG、别自建推理、别只看跑分。">
+<meta name="robots" content="index,follow">
+<link rel="canonical" href="https://tool.cnagt.com/pitfalls">
+<meta property="og:title" content="避坑指南 — 什么时候别用 AI — ToolHub">
+<meta property="og:description" content="带观点的 AI 避坑清单：什么时候别用大模型、别做 RAG、别自建推理、别只看跑分。">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://tool.cnagt.com/pitfalls">
+<meta property="og:site_name" content="ToolHub">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://tool.cnagt.com/assets/brand/og-default.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="ToolHub — 本地优先的 AI 工具与 Skills 目录">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="避坑指南 — 什么时候别用 AI — ToolHub">
+<meta name="twitter:description" content="带观点的 AI 避坑清单：什么时候别用大模型、别做 RAG、别自建推理、别只看跑分。">
+<meta name="twitter:image" content="https://tool.cnagt.com/assets/brand/og-default.png">
+<meta name="theme-color" content="#f7f9fc">
+<link rel="icon" type="image/svg+xml" href="/assets/brand/toolhub-mark.svg">
+<link rel="apple-touch-icon" href="/assets/brand/toolhub-mark.svg">
+<link rel="stylesheet" href="/assets/css/app.css">
+<link rel="manifest" href="/manifest.webmanifest">
+
+</head>
+<body>
+<header class="nav"><div class="container nav-inner">
+<a class="logo" href="/"><img class="logo-mark" src="/assets/brand/toolhub-mark.svg" alt="ToolHub"><span class="logo-name">Tool<span>Hub</span></span></a>
+<nav class="nav-links"><a href="/start">任务规划</a><a href="/tools">工具</a><a href="/discover">资源库</a><a href="/workflows">工作流</a><a href="/workspace-content">工作台</a><a href="/learn">学习</a><a href="/tools/ai-tools-directory">AI 工具</a><a href="/tools/ai-ecosystem-directory">AI 生态</a><a href="/skills">Skills 目录</a><a href="/pitfalls">避坑指南</a></nav>
+<div class="nav-spacer"></div>
+<button class="kbtn" data-cmdk-open type="button" aria-label="搜索全部资源"><span class="kbtn-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"/><path d="m21 21-4.3-4.3"/></svg></span><span class="kbtn-txt">搜索</span><kbd>Ctrl K</kbd></button>
+<button class="icon-btn" id="theme-btn" title="切换主题" type="button" aria-label="切换主题"><span class="theme-ico theme-ico-moon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.8A8.5 8.5 0 1 1 11.2 3 6.6 6.6 0 0 0 21 12.8Z"/></svg></span><span class="theme-ico theme-ico-sun"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg></span></button>
+</div></header>
+<main class="container">
+<div class="doc"><div class="crumbs"><a href="/">首页</a> / 避坑指南</div>
+<h1>什么时候别用 AI（避坑指南）</h1>
+<p class="lead">大多数教程只教你“怎么上手”，却很少告诉你“什么时候别用”。这里是一份带观点的清单，帮你在动手前少走弯路、少花冤柉钱。</p>
+<div class="pitfalls"><div class="pitfall"><div class="pf-num">1</div><div class="pf-body"><h3>简单分类 / 信息抽取，别一上来就用最贵的旗舰模型</h3><p class="pf-avoid"><b>别急着：</b>用顶配 GPT/Claude 跑标签分类、字段抽取这类结构化小任务。</p><p class="pf-why"><b>为什么：</b>这类任务小模型甚至规则就能做好，旗舰模型贵几十倍且更慢。</p><p class="pf-use"><b>更好的做法：</b>先用小模型（mini / flash / 本地开源）或规则，做不好再升级。</p></div></div><div class="pitfall"><div class="pf-num">2</div><div class="pf-body"><h3>文档很少时，别为了 RAG 而 RAG</h3><p class="pf-avoid"><b>别急着：</b>只有几十页文档就搭向量库 + 检索链路。</p><p class="pf-why"><b>为什么：</b>小语料下 RAG 的工程复杂度与出错面远大于收益，还会引入检索噪声。</p><p class="pf-use"><b>更好的做法：</b>直接把文档放进长上下文模型，等数据量真正大了再上检索。</p></div></div><div class="pitfall"><div class="pf-num">3</div><div class="pf-body"><h3>别把专用向量数据库当成第一步</h3><p class="pf-avoid"><b>别急着：</b>项目一开始就引入一套专用向量数据库服务。</p><p class="pf-why"><b>为什么：</b>初期数据量下，关键词 / BM25 或 SQLite / pgvector 就够用，运维成本更低。</p><p class="pf-use"><b>更好的做法：</b>先用嵌入式方案（SQLite / Postgres 扩展），规模上去再迁移到专用库。</p></div></div><div class="pitfall"><div class="pf-num">4</div><div class="pf-body"><h3>一次调用能搞定的事，别套 Agent 框架</h3><p class="pf-avoid"><b>别急着：</b>为简单任务搭多步 Agent / 工具链。</p><p class="pf-why"><b>为什么：</b>多步 Agent 增加了失败面、延迟与成本，调试也更难。</p><p class="pf-use"><b>更好的做法：</b>能用一次带结构化输出的调用完成，就不要上 Agent；确实需要多步再引入。</p></div></div><div class="pitfall"><div class="pf-num">5</div><div class="pf-body"><h3>请求量不大时，别过早自建推理</h3><p class="pf-avoid"><b>别急着：</b>为了“省钱”提前买 GPU 自建推理服务。</p><p class="pf-why"><b>为什么：</b>低利用率下，GPU 闲置与运维人力反而比调 API 更贵。</p><p class="pf-use"><b>更好的做法：</b>先用 API，用成本沙盘算清楚盈亏平衡点，真正超过再自建。</p></div></div><div class="pitfall"><div class="pf-num">6</div><div class="pf-body"><h3>选模型，别只看榜单跑分</h3><p class="pf-avoid"><b>别急着：</b>看到某模型榜单第一就直接上生产。</p><p class="pf-why"><b>为什么：</b>公开榜单与你的真实任务分布往往不一致，还可能有数据污染。</p><p class="pf-use"><b>更好的做法：</b>用你自己的数据做小样本实测，再用模型擂台对比关键维度。</p></div></div><div class="pitfall"><div class="pf-num">7</div><div class="pf-body"><h3>提示词别只写一句话</h3><p class="pf-avoid"><b>别急着：</b>把复杂任务压成一句笼统的提示词。</p><p class="pf-why"><b>为什么：</b>缺少角色 / 受众 / 格式 / 质量标准 / 示例，输出就会飘忽不定。</p><p class="pf-use"><b>更好的做法：</b>用可参数化提示词生成器补齐约束，把“你是谁 / 给谁看 / 要什么格式”说清楚。</p></div></div><div class="pitfall"><div class="pf-num">8</div><div class="pf-body"><h3>别忽视数据合规与许可证</h3><p class="pf-avoid"><b>别急着：</b>把敏感数据随意发给境外 API，或把开源模型直接商用。</p><p class="pf-why"><b>为什么：</b>国内业务需注意数据出境合规；部分开源权重对商用有限制。</p><p class="pf-use"><b>更好的做法：</b>优先国内直连 / 可自托管方案，上线前确认数据流向与模型许可证。</p></div></div><div class="pitfall"><div class="pf-num">9</div><div class="pf-body"><h3>别把免费额度当成生产依赖</h3><p class="pf-avoid"><b>别急着：</b>用免费 / 试用额度支撑正式业务流量。</p><p class="pf-why"><b>为什么：</b>免费额度有限速、稳定性与条款变化风险，随时可能断供。</p><p class="pf-use"><b>更好的做法：</b>免费额度用于原型 / 低峰兼备，生产链路准备付费兼容方案与降级预案。</p></div></div></div>
+<p class="msg">以上为编辑观点，用于启发判断；具体取舍请结合你的数据规模、团队能力与合规要求。想快速得到组合建议，可用 <a href="/tools/ai-selector">AI 选型决策引擎</a> 与 <a href="/tools/ai-cost-sandbox">成本沙盘</a>。</p></div>
+</main>
+<footer class="footer"><div class="container">
+<div class="foot-brand"><div class="logo"><img class="logo-mark" src="/assets/brand/toolhub-mark.svg" alt="ToolHub"><span class="logo-name">Tool<span>Hub</span></span></div>
+<p class="foot-tag">免费、快速、隐私优先的实用工具，全部在浏览器本地运行，文件不会离开你的设备。</p></div>
+<nav class="fcols" aria-label="工具分类">
+<a class="foot-category" href="/tools#text"><span class="foot-category-icon" aria-hidden="true">📝</span><span><b>文本与数据</b><small>11 个本地工具 · 查看分类 →</small></span></a><a class="foot-category" href="/tools#dev"><span class="foot-category-icon" aria-hidden="true">⚡</span><span><b>开发者</b><small>20 个本地工具 · 查看分类 →</small></span></a><a class="foot-category" href="/tools#ai"><span class="foot-category-icon" aria-hidden="true">🤖</span><span><b>AI 与提示词</b><small>11 个本地工具 · 查看分类 →</small></span></a><a class="foot-category" href="/tools#convert"><span class="foot-category-icon" aria-hidden="true">🔁</span><span><b>换算与单位</b><small>6 个本地工具 · 查看分类 →</small></span></a><a class="foot-category" href="/tools#image"><span class="foot-category-icon" aria-hidden="true">🖼️</span><span><b>图像</b><small>4 个本地工具 · 查看分类 →</small></span></a><a class="foot-category" href="/tools#color"><span class="foot-category-icon" aria-hidden="true">🎨</span><span><b>颜色与设计</b><small>6 个本地工具 · 查看分类 →</small></span></a><a class="foot-category" href="/tools#seo"><span class="foot-category-icon" aria-hidden="true">🔍</span><span><b>网站与 SEO</b><small>8 个本地工具 · 查看分类 →</small></span></a><a class="foot-category" href="/tools#calc"><span class="foot-category-icon" aria-hidden="true">📊</span><span><b>计算器</b><small>13 个本地工具 · 查看分类 →</small></span></a>
+</nav>
+<div class="disc"><a href="/skills">Skills 目录</a> · <a href="/discover">资源库</a> · <a href="/workflows">工作流</a> · <a href="/learn">学习</a> · <a href="/compare">对比</a> · <a href="/pitfalls">避坑指南</a> · <a href="/about">关于</a> · <a href="/privacy">隐私说明</a> · <a href="/terms">使用条款</a> · <a href="/data-policy">数据与收录政策</a> · <a href="/status">服务状态</a> · <a href="/contact">联系与反馈</a> · 所有本地工具均在浏览器处理；外部资源会在跳转前明确标注。© 2026 ToolHub。</div>
+</div></footer>
+<script type="module" src="/assets/js/palette.js"></script>
+<script src="/assets/js/sw-register.js"></script>
+<script src="/assets/js/app.js"></script>
+</body></html>

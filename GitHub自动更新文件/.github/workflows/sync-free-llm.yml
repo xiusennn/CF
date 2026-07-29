@@ -1,0 +1,32 @@
+name: 同步免费 Token 目录
+on:
+  schedule:
+    - cron: '17 */6 * * *'
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - name: 同步免费 LLM 目录
+        run: node build/sync-free-llm.mjs
+      - name: 提交目录更新
+        run: |
+          git diff --quiet || (
+            git config user.name toolhub-bot &&
+            git config user.email bot@toolhub.local &&
+            git add public/assets/js/freeapi-import.js public/assets/data/free-llm-sync-status.json &&
+            git commit -m 'chore: sync free LLM APIs' &&
+            git push
+          )
+      - name: 同步后自动部署
+        if: ${{ env.CLOUDFLARE_API_TOKEN != '' }}
+        env:
+          CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+        run: npx wrangler deploy

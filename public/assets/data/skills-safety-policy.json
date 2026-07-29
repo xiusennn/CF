@@ -1,0 +1,11 @@
+{
+  "version": "1.0",
+  "policy": "第三方 Skill 默认只索引元数据，不自动执行或本地发布脚本。",
+  "riskLevels": {
+    "reviewed": "已人工或规则审核的纯文本/低风险内容",
+    "unreviewed": "仅索引，需在使用前审查",
+    "quarantine": "含脚本、网络访问、密钥、高权限或可疑指令，隔离处理"
+  },
+  "requiredFields": ["source", "license", "updatedAt", "contentHash", "risk", "contentState"],
+  "prohibited": ["自动执行下载脚本", "自动导入密钥", "自动授予文件/网络权限"]
+}

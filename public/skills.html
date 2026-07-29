@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="zh-CN" data-theme="light">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Skills 目录 — ToolHub</title>
+<meta name="description" content="可搜索的全网 Agent Skills 目录：按关键词、许可证、安全等级与 Star 数筛选，并直达上游 SKILL.md。">
+<meta name="robots" content="index,follow">
+<link rel="canonical" href="https://tool.cnagt.com/skills">
+<meta property="og:title" content="Skills 目录 — ToolHub">
+<meta property="og:description" content="可搜索的全网 Agent Skills 目录：按关键词、许可证、安全等级与 Star 数筛选，并直达上游 SKILL.md。">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://tool.cnagt.com/skills">
+<meta property="og:site_name" content="ToolHub">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://tool.cnagt.com/assets/brand/og-default.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="ToolHub — 本地优先的 AI 工具与 Skills 目录">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Skills 目录 — ToolHub">
+<meta name="twitter:description" content="可搜索的全网 Agent Skills 目录：按关键词、许可证、安全等级与 Star 数筛选，并直达上游 SKILL.md。">
+<meta name="twitter:image" content="https://tool.cnagt.com/assets/brand/og-default.png">
+<meta name="theme-color" content="#f7f9fc">
+<link rel="icon" type="image/svg+xml" href="/assets/brand/toolhub-mark.svg">
+<link rel="apple-touch-icon" href="/assets/brand/toolhub-mark.svg">
+<link rel="stylesheet" href="/assets/css/app.css">
+<link rel="stylesheet" href="/assets/css/skills-catalog.css">
+<link rel="manifest" href="/manifest.webmanifest">
+
+</head>
+<body>
+<header class="nav"><div class="container nav-inner">
+<a class="logo" href="/"><img class="logo-mark" src="/assets/brand/toolhub-mark.svg" alt="ToolHub"><span class="logo-name">Tool<span>Hub</span></span></a>
+<nav class="nav-links"><a href="/start">任务规划</a><a href="/tools">工具</a><a href="/discover">资源库</a><a href="/workflows">工作流</a><a href="/workspace-content">工作台</a><a href="/learn">学习</a><a href="/tools/ai-tools-directory">AI 工具</a><a href="/tools/ai-ecosystem-directory">AI 生态</a><a href="/skills">Skills 目录</a><a href="/pitfalls">避坑指南</a></nav>
+<div class="nav-spacer"></div>
+<button class="kbtn" data-cmdk-open type="button" aria-label="搜索全部资源"><span class="kbtn-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"/><path d="m21 21-4.3-4.3"/></svg></span><span class="kbtn-txt">搜索</span><kbd>Ctrl K</kbd></button>
+<button class="icon-btn" id="theme-btn" title="切换主题" type="button" aria-label="切换主题"><span class="theme-ico theme-ico-moon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.8A8.5 8.5 0 1 1 11.2 3 6.6 6.6 0 0 0 21 12.8Z"/></svg></span><span class="theme-ico theme-ico-sun"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg></span></button>
+</div></header>
+<main class="container">
+<div class="doc"><section class="sk-wrap">
+<div class="crumbs"><a href="/">首页</a> / Skills 目录</div>
+<header class="sk-hero"><span class="eyebrow">AGENT SKILLS INDEX</span>
+<h1>全网 Skills 目录</h1>
+<p>按任务关键词、许可证、安全等级与活跃度检索公开仓库中的 Agent Skills。站内只保存元数据与外链，不转存 SKILL.md 正文；每条结果都可一键跳回上游仓库核对。</p></header>
+<div class="sk-stats"><div class="sk-stat"><b id="sk-total">—</b><span>收录 Skills 总数</span></div><div class="sk-stat"><b id="sk-core">—</b><span>core · 许可证明确</span></div><div class="sk-stat"><b id="sk-index">—</b><span>index · 仅外链索引</span></div><div class="sk-stat"><b id="sk-review">—</b><span>需人工复核</span></div><div class="sk-stat"><b id="sk-date">—</b><span>索引生成日期</span></div></div>
+<section class="sk-panel" aria-label="搜索与筛选">
+<div class="sk-searchrow">
+<input id="sk-q" type="search" placeholder="关键词搜索（多个词空格隔开 = 同时包含），例如：pdf 抽取" autocomplete="off" spellcheck="false">
+<div class="sk-scope" role="group" aria-label="搜索范围">
+<button id="sk-scope-featured" type="button" aria-pressed="true">精选优先</button>
+<button id="sk-scope-full" type="button" aria-pressed="false">全库搜索</button>
+</div></div>
+<div class="sk-filters">
+<label>分类<select id="sk-cat"><option value="">全部</option></select></label>
+<label>层级<select id="sk-tier"><option value="">全部</option><option value="c">core（许可证明确）</option><option value="i">index（仅外链）</option></select></label>
+<label>安全等级<select id="sk-safety"><option value="">全部</option><option value="s">无命中</option><option value="r">需复核</option><option value="x">高风险</option></select></label>
+<label>许可证<select id="sk-license"><option value="">全部</option></select></label>
+<label>作者 / 组织<select id="sk-owner"><option value="">全部</option></select></label>
+<label>最低 Star 数<input id="sk-stars" type="number" min="0" step="100" value="0" inputmode="numeric"></label>
+<label>排序<select id="sk-sort"><option value="quality">质量分优先</option><option value="stars">Star 数优先</option><option value="updated">最近更新</option><option value="name">名称 A-Z</option></select></label>
+</div>
+<div class="sk-progress" id="sk-progress" hidden><i></i></div>
+</section>
+<p class="sk-status" id="sk-status" aria-live="polite"></p>
+<ul class="sk-list" id="sk-list"></ul>
+<button class="sk-more" id="sk-more" type="button" hidden></button>
+<p class="sk-note">合规说明：core 表示上游许可证可识别；index 表示上游未声明许可证，本站仅做索引与外链。带红色标签的条目命中了安全规则，使用前请人工阅读 SKILL.md。引用或商用前请自行确认上游许可证与权限边界。数据按分片流式加载，首屏只下载索引与第一个分片。</p>
+</section></div>
+</main>
+<footer class="footer"><div class="container">
+<div class="foot-brand"><div class="logo"><img class="logo-mark" src="/assets/brand/toolhub-mark.svg" alt="ToolHub"><span class="logo-name">Tool<span>Hub</span></span></div>
+<p class="foot-tag">免费、快速、隐私优先的实用工具，全部在浏览器本地运行，文件不会离开你的设备。</p></div>
+<nav class="fcols" aria-label="工具分类">
+<a class="foot-category" href="/tools#text"><span class="foot-category-icon" aria-hidden="true">📝</span><span><b>文本与数据</b><small>11 个本地工具 · 查看分类 →</small></span></a><a class="foot-category" href="/tools#dev"><span class="foot-category-icon" aria-hidden="true">⚡</span><span><b>开发者</b><small>20 个本地工具 · 查看分类 →</small></span></a><a class="foot-category" href="/tools#ai"><span class="foot-category-icon" aria-hidden="true">🤖</span><span><b>AI 与提示词</b><small>11 个本地工具 · 查看分类 →</small></span></a><a class="foot-category" href="/tools#convert"><span class="foot-category-icon" aria-hidden="true">🔁</span><span><b>换算与单位</b><small>6 个本地工具 · 查看分类 →</small></span></a><a class="foot-category" href="/tools#image"><span class="foot-category-icon" aria-hidden="true">🖼️</span><span><b>图像</b><small>4 个本地工具 · 查看分类 →</small></span></a><a class="foot-category" href="/tools#color"><span class="foot-category-icon" aria-hidden="true">🎨</span><span><b>颜色与设计</b><small>6 个本地工具 · 查看分类 →</small></span></a><a class="foot-category" href="/tools#seo"><span class="foot-category-icon" aria-hidden="true">🔍</span><span><b>网站与 SEO</b><small>8 个本地工具 · 查看分类 →</small></span></a><a class="foot-category" href="/tools#calc"><span class="foot-category-icon" aria-hidden="true">📊</span><span><b>计算器</b><small>13 个本地工具 · 查看分类 →</small></span></a>
+</nav>
+<div class="disc"><a href="/skills">Skills 目录</a> · <a href="/discover">资源库</a> · <a href="/workflows">工作流</a> · <a href="/learn">学习</a> · <a href="/compare">对比</a> · <a href="/pitfalls">避坑指南</a> · <a href="/about">关于</a> · <a href="/privacy">隐私说明</a> · <a href="/terms">使用条款</a> · <a href="/data-policy">数据与收录政策</a> · <a href="/status">服务状态</a> · <a href="/contact">联系与反馈</a> · 所有本地工具均在浏览器处理；外部资源会在跳转前明确标注。© 2026 ToolHub。</div>
+</div></footer>
+<script type="module" src="/assets/js/palette.js"></script>
+<script src="/assets/js/sw-register.js"></script>
+<script src="/assets/js/app.js"></script><script src="/assets/js/skills-catalog.js" defer></script>
+</body></html>

@@ -1,0 +1,20 @@
+# ToolHub — Cloudflare Workers (FREE plan), CNAGT-native static-first config.
+name = "toolhub"
+main = "src/index.js"
+compatibility_date = "2026-07-03"
+
+# Static assets (pre-rendered HTML/CSS/JS). Requests to these are free & unlimited.
+[assets]
+directory = "./public"
+binding = "ASSETS"
+not_found_handling = "none"
+
+[observability]
+enabled = true
+head_sampling_rate = 1
+
+# No D1/KV/R2 needed for the client-side tool layer — add later for the
+# task-recommendation + catalog layer (master prompt §30/§31).
+
+[vars]
+RELEASE_ID = "2026-07-29-v57.10"

@@ -1,0 +1,55 @@
+name: 自动同步 Agent Skills
+on:
+  schedule:
+    - cron: '23 */6 * * *'
+  workflow_dispatch:
+    inputs:
+      max_repos:
+        description: "本次最多同步仓库数（首次建议 50）"
+        required: false
+        default: "50"
+permissions:
+  contents: write
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - name: 安装依赖
+        run: npm install --no-audit --no-fund
+      - name: 拉取上游 Skills 变更
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          SYNC_MAX_REPOS: ${{ inputs.max_repos || '1200' }}
+        run: node build/sync-skills.mjs
+      - name: 刷新 GitHub 周榜快照
+        run: node build/sync-trending.mjs
+      - name: 重建目录与静态页
+        run: npm run build:all
+      - name: 发布前质量闸门
+        run: |
+          npm run release:check
+          npm test
+          npm run selfcheck
+          npm run check:static
+      - name: 提交数据变更
+        run: |
+          git diff --quiet || (
+            git config user.name toolhub-bot &&
+            git config user.email bot@toolhub.local &&
+            git add skills-data public &&
+            git commit -m 'chore: sync curated skills' &&
+            git push
+          )
+      - name: 同步后自动部署
+        if: ${{ env.CLOUDFLARE_API_TOKEN != '' }}
+        env:
+          CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+        run: npx wrangler deploy
+      - name: 同步摘要
+        if: ${{ always() }}
+        run: cat public/assets/data/skills-sync-status.json >> $GITHUB_STEP_SUMMARY || true

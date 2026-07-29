@@ -1,0 +1,78 @@
+{
+  "version": "1.0",
+  "generatedAt": "2026-07-29T06:01:50.924Z",
+  "datasets": {
+    "aiTools": {
+      "count": 419,
+      "source": "ToolHub catalog"
+    },
+    "freeLlm": {
+      "count": 22,
+      "sources": [
+        "cheahjs/free-llm-api-resources",
+        "mnfst/awesome-free-llm-apis",
+        "nejib1/Free-LLM",
+        "for-the-zero/Free-LLM-Collection",
+        "FreeLLM-API-KeyHub"
+      ]
+    },
+    "models": {
+      "count": 26
+    },
+    "publicApis": {
+      "count": 961
+    },
+    "skills": {
+      "localOrIndexed": 46,
+      "upstreamSources": [
+        {
+          "name": "SkillsMP",
+          "known": 283000,
+          "refresh": "持续发现",
+          "trust": "外部索引"
+        },
+        {
+          "name": "Skillshub",
+          "known": 5000,
+          "refresh": "高频",
+          "trust": "开源注册表"
+        },
+        {
+          "name": "rrskill",
+          "known": 77575,
+          "refresh": "持续更新",
+          "trust": "外部目录"
+        },
+        {
+          "name": "Agentic Awesome Skills",
+          "known": 1935,
+          "refresh": "版本发布",
+          "trust": "开源集合"
+        },
+        {
+          "name": "Scientific Agent Skills",
+          "known": 148,
+          "refresh": "活跃维护",
+          "trust": "开源集合"
+        },
+        {
+          "name": "Anthropic Skills",
+          "known": 0,
+          "refresh": "官方维护",
+          "trust": "官方"
+        },
+        {
+          "name": "NVIDIA Skills",
+          "known": 0,
+          "refresh": "每日同步",
+          "trust": "官方"
+        }
+      ]
+    }
+  },
+  "verification": {
+    "freeLlm": "official page or upstream source",
+    "skills": "metadata first; unsafe content quarantined",
+    "githubRadar": "query/classification pipeline; persistent snapshots require D1/KV + Cron"
+  }
+}

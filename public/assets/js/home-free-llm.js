@@ -1,0 +1,4 @@
+import { FREE_LLM_PROVIDERS } from './freeapi.js';
+const $=s=>document.querySelector(s);
+function render(){const root=$('#home-free-llm-list');if(!root)return;const mode=$('#home-free-mode')?.value||'全部';const region=$('#home-free-region')?.value||'全部';let xs=FREE_LLM_PROVIDERS.filter(x=>(mode==='全部'||x.type===mode)&&(region==='全部'||x.region===region));root.innerHTML=xs.slice(0,3).map(x=>`<a class="hfl-row" href="${x.url}" target="_blank" rel="noopener"><b>${x.name}</b><span>${x.type} · ${x.region}</span><small>${x.models}</small><em>${x.limits}</em></a>`).join('')||'<p>没有匹配的免费 Token API。</p>';$('#home-free-count').textContent=xs.length+' 个可用服务商';}
+document.addEventListener('DOMContentLoaded',()=>{['#home-free-mode','#home-free-region'].forEach(s=>$(s)?.addEventListener('change',render));render()});

@@ -1,0 +1,12 @@
+{
+  "name": "ToolHub 工具箱",
+  "short_name": "ToolHub",
+  "description": "免费、快速、隐私优先的实用工具与 AI 资源导航",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "background_color": "#f7f9fc",
+  "theme_color": "#f7f9fc",
+  "lang": "zh-CN",
+  "icons": [{ "src": "/assets/brand/toolhub-mark.svg", "sizes": "any", "type": "image/svg+xml", "purpose": "any maskable" }]
+}

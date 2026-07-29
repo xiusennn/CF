@@ -1,0 +1,104 @@
+/* skills-catalog.css — only loaded by /skills.html */
+.sk-wrap{max-width:1180px;margin:0 auto;padding:0 20px 72px}
+.sk-hero{padding:40px 0 8px}
+.sk-hero .eyebrow{display:inline-block;font-size:12px;letter-spacing:.14em;text-transform:uppercase;opacity:.65}
+.sk-hero h1{margin:.35em 0 .2em;font-size:clamp(26px,4vw,40px);line-height:1.15}
+.sk-hero p{margin:0;max-width:70ch;opacity:.8;line-height:1.7}
+.sk-stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:12px;margin:26px 0 8px}
+.sk-stat{border:1px solid var(--line,#e4e8ef);border-radius:14px;padding:14px 16px;background:var(--card,#fff)}
+.sk-stat b{display:block;font-size:22px;line-height:1.2;font-variant-numeric:tabular-nums}
+.sk-stat span{display:block;margin-top:4px;font-size:12px;opacity:.7}
+.sk-panel{margin:22px 0 10px;border:1px solid var(--line,#e4e8ef);border-radius:16px;padding:16px;background:var(--card,#fff)}
+.sk-searchrow{display:flex;gap:10px;flex-wrap:wrap}
+.sk-searchrow input[type=search]{flex:1 1 320px;min-width:0;padding:11px 13px;border:1px solid var(--line,#e4e8ef);border-radius:10px;background:transparent;color:inherit;font:inherit}
+.sk-scope{display:inline-flex;border:1px solid var(--line,#e4e8ef);border-radius:10px;overflow:hidden}
+.sk-scope button{padding:10px 14px;border:0;background:transparent;color:inherit;font:inherit;cursor:pointer}
+.sk-scope button[aria-pressed=true]{background:var(--accent,#5e9fe8);color:#fff}
+.sk-filters{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:10px;margin-top:12px}
+.sk-filters label{display:flex;flex-direction:column;gap:5px;font-size:12px;opacity:.85}
+.sk-filters select,.sk-filters input{padding:9px 10px;border:1px solid var(--line,#e4e8ef);border-radius:9px;background:transparent;color:inherit;font:inherit}
+.sk-progress{height:6px;border-radius:99px;background:rgba(127,127,127,.18);overflow:hidden;margin-top:12px}
+.sk-progress i{display:block;height:100%;width:0;background:var(--accent,#5e9fe8);transition:width .18s linear}
+.sk-status{margin:14px 0 6px;font-size:13px;opacity:.78;min-height:1.4em}
+.sk-list{display:grid;gap:12px;margin:6px 0 0;padding:0;list-style:none}
+.sk-card{border:1px solid var(--line,#e4e8ef);border-radius:14px;padding:14px 16px;background:var(--card,#fff)}
+.sk-card h3{margin:0 0 4px;font-size:16px;word-break:break-word}
+.sk-card .sk-repo{font-size:12px;opacity:.7;word-break:break-all}
+.sk-card p{margin:8px 0 10px;font-size:14px;line-height:1.62;opacity:.9}
+.sk-tags{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:10px}
+.sk-tag{font-size:11px;padding:3px 8px;border-radius:99px;border:1px solid var(--line,#e4e8ef);opacity:.9}
+.sk-tag.core{border-color:#72bc8f;color:#2f7d55}
+.sk-tag.index{border-color:#eac26b;color:#8a6512}
+.sk-tag.risk{border-color:#e06a5c;color:#b3392a;font-weight:600}
+.sk-tag.review{border-color:#df9255;color:#96541a}
+.sk-links{display:flex;flex-wrap:wrap;gap:8px}
+.sk-links a,.sk-links button{font-size:12px;padding:6px 11px;border-radius:9px;border:1px solid var(--line,#e4e8ef);background:transparent;color:inherit;text-decoration:none;cursor:pointer}
+.sk-links a:hover,.sk-links button:hover{border-color:var(--accent,#5e9fe8)}
+.sk-more{margin:18px auto 0;display:block;padding:11px 20px;border-radius:11px;border:1px solid var(--line,#e4e8ef);background:transparent;color:inherit;font:inherit;cursor:pointer}
+.sk-note{margin-top:26px;font-size:12.5px;line-height:1.7;opacity:.72}
+[data-theme=dark] .sk-stat,[data-theme=dark] .sk-panel,[data-theme=dark] .sk-card{background:rgba(255,255,255,.03);border-color:rgba(255,255,255,.12)}
+[data-theme=dark] .sk-filters select,[data-theme=dark] .sk-filters input,[data-theme=dark] .sk-searchrow input[type=search]{border-color:rgba(255,255,255,.14)}
+
+/* --- pre-rendered skill pages (static SEO surface) --- */
+.sk-detail .sk-hero{margin-bottom:18px}
+.sk-badges{display:flex;flex-wrap:wrap;gap:8px;margin-top:14px}
+.sk-badge{font-size:12px;padding:4px 10px;border-radius:99px;border:1px solid var(--line,#e4e8ef);opacity:.9}
+.sk-facts{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:12px;margin:22px 0}
+.sk-facts>div{border:1px solid var(--line,#e4e8ef);border-radius:12px;padding:12px 14px;background:var(--card,#fff)}
+.sk-facts dt{font-size:12px;opacity:.65;margin-bottom:4px}
+.sk-facts dd{margin:0;font-size:14px;word-break:break-word}
+.sk-facts code{font-size:12.5px;word-break:break-all}
+.sk-actions{display:flex;flex-wrap:wrap;gap:10px;margin:18px 0 4px}
+.sk-cards{list-style:none;padding:0;margin:22px 0 0;display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:14px}
+.sk-card-title{font-size:16px;font-weight:600;text-decoration:none;word-break:break-word}
+.sk-card-desc{margin:8px 0 10px;font-size:14px;line-height:1.62;opacity:.9}
+.sk-card-meta{margin:0;font-size:12px;opacity:.7;word-break:break-word}
+.sk-pager{display:flex;align-items:center;gap:16px;justify-content:center;margin:28px 0 8px;font-size:14px}
+.sk-pager span{opacity:.7}
+[data-theme=dark] .sk-facts>div{background:rgba(255,255,255,.03);border-color:rgba(255,255,255,.12)}
+[data-theme=dark] .sk-badge{border-color:rgba(255,255,255,.14)}
+
+.sk-stale{margin:14px 0 0;padding:10px 14px;border-radius:11px;font-size:13px;line-height:1.6;border:1px solid #eac26b;background:rgba(234,194,107,.12);color:#8a6512}
+[data-theme=dark] .sk-stale{color:#eac26b;background:rgba(234,194,107,.08)}
+
+/* safety report ---------------------------------------------------------- */
+.sk-report{margin:26px 0 8px;padding:18px 20px;border:1px solid var(--line,#e4e8ef);border-radius:14px;background:var(--card,#fff)}
+.sk-report h2{margin:0 0 10px;font-size:17px}
+.sk-report-head{margin:0 0 12px;font-size:14px}
+.sk-report-level{display:inline-block;font-size:12px;padding:3px 10px;border-radius:99px;margin-right:6px;border:1px solid currentColor}
+.sk-report-low .sk-report-level{color:#2f855a}
+.sk-report-mid .sk-report-level{color:#8a6512}
+.sk-report-high .sk-report-level{color:#c0392b}
+.sk-report-high{border-color:rgba(192,57,43,.4);background:rgba(192,57,43,.05)}
+.sk-report-list{list-style:none;margin:0 0 12px;padding:0;display:grid;gap:8px}
+.sk-report-list li{display:grid;gap:2px;padding:10px 12px;border-radius:10px;background:rgba(127,127,127,.06)}
+.sk-report-list strong{font-size:14px}
+.sk-report-list span{font-size:13px;line-height:1.6;opacity:.85}
+.sk-report-list code{font-size:11.5px;opacity:.6}
+.sk-report-note{margin:6px 0 0;font-size:12.5px;line-height:1.65;opacity:.75}
+[data-theme=dark] .sk-report{background:rgba(255,255,255,.03);border-color:rgba(255,255,255,.12)}
+
+/* rankings + weekly changes ---------------------------------------------- */
+.sk-ranked{counter-reset:none}
+.sk-ranked .sk-card{position:relative;padding-top:26px;border:1px solid var(--line,#e4e8ef);border-radius:12px;padding:26px 14px 14px;background:var(--card,#fff)}
+.sk-rank{position:absolute;top:10px;left:14px;font-size:11px;font-weight:700;opacity:.5}
+.sk-flagged{color:#c0392b}
+.sk-changes{width:100%;border-collapse:collapse;margin:18px 0 4px;font-size:14px}
+.sk-changes th,.sk-changes td{text-align:left;padding:8px 10px;border-bottom:1px solid var(--line,#e4e8ef)}
+.sk-changes th{font-size:12px;opacity:.65;font-weight:600}
+[data-theme=dark] .sk-ranked .sk-card{background:rgba(255,255,255,.03);border-color:rgba(255,255,255,.12)}
+
+/* in-page SKILL.md reader */
+.sk-reader { margin: 26px 0 0; }
+.sk-reader-note { margin: 6px 0 12px; font-size: 12px; color: var(--text-faint, #8b8b87); line-height: 1.6; }
+.sk-reader-load { border: 1px solid var(--border, #e3e3e0); background: var(--surface, #fff); border-radius: 7px; padding: 8px 16px; font: 700 13px var(--font, sans-serif); cursor: pointer; }
+.sk-reader-load:hover { border-color: currentColor; }
+.sk-reader-load[disabled] { opacity: .55; cursor: progress; }
+.sk-reader-status { margin-top: 8px; font-size: 12px; color: var(--text-dim, #6b6b66); }
+.sk-reader-body { margin-top: 12px; border: 1px solid var(--border, #e3e3e0); border-radius: 10px; max-height: 640px; overflow: auto; }
+.sk-lines { list-style: none; margin: 0; padding: 0; font: 12px/1.7 var(--mono, monospace); }
+.sk-line { display: grid; grid-template-columns: 48px 1fr; gap: 10px; padding: 1px 12px 1px 0; }
+.sk-line-no { text-align: right; color: var(--text-faint, #b0b0aa); user-select: none; }
+.sk-line code { white-space: pre-wrap; word-break: break-word; }
+.sk-line-risk { background: rgba(196, 82, 63, .09); border-left: 3px solid #c4523f; }
+.sk-line-flag { grid-column: 2; display: block; margin: 2px 0 6px; font: 600 11px/1.55 var(--font, sans-serif); color: #a33f2e; }

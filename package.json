@@ -1,0 +1,28 @@
+{
+  "name": "toolhub",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "ToolHub — privacy-first free online tools (Cloudflare Workers, static-first).",
+  "scripts": {
+    "build": "node build/build.mjs && node build/build-skills-pages.mjs",
+    "test": "node tests/core.test.mjs && node tests/core.v2.test.mjs && node tests/core.v3.test.mjs && node tests/core.v4.test.mjs && node tests/worker.test.mjs && node tests/sync-skills.test.mjs && node tests/repo-policy.test.mjs && node tests/cpu-budget.test.mjs && node tests/trending.test.mjs",
+    "test:browser": "node tests/browser.test.mjs",
+    "serve": "node tests/server.mjs",
+    "dev": "wrangler dev",
+    "release:check": "node build/release-check.mjs",
+    "verify:release": "npm run build && npm run check:static && npm test && npm run selfcheck",
+    "deploy": "node build/release-check.mjs && npm run verify:release && wrangler deploy",
+    "data:manifest": "node build/write-data-manifest.mjs",
+    "selfcheck": "node build/selfcheck.mjs",
+    "check:static": "node tests/static-release.test.mjs",
+    "build:skills-pages": "node build/build-skills-pages.mjs",
+    "build:skills": "node --max-old-space-size=4096 build/build-skills-catalog.mjs",
+    "build:all": "npm run build:skills && npm run build && node build/sync-trending.mjs",
+    "sync:skills": "node build/sync-skills.mjs",
+    "sync:trending": "node build/sync-trending.mjs"
+  },
+  "devDependencies": {
+    "wrangler": ">=3.60.0"
+  }
+}

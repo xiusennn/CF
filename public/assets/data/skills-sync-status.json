@@ -1,15 +1,15 @@
 {
-  "generated_at": "2026-07-29T09:20:19Z",
-  "duration_ms": 141285,
-  "skills": 159122,
+  "generated_at": "2026-07-29T09:38:14Z",
+  "duration_ms": 127789,
+  "skills": 159521,
   "repos_total": 1013,
   "repos_allowlisted": 475,
   "repos_skipped": 538,
   "repos_checked": 50,
   "skills_added": 400,
-  "skills_removed": 9,
-  "skills_refreshed": 15966,
+  "skills_removed": 1,
+  "skills_refreshed": 24947,
   "repos_gone": 0,
   "rate_limited": false,
-  "next_cursor": 50
+  "next_cursor": 100
 }

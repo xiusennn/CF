@@ -1,0 +1,36 @@
+{
+  "generatedAt": "2026-07-29T09:27:00.778Z",
+  "sources": [
+    {
+      "repo": "mnfst/awesome-free-llm-apis",
+      "path": "data.json",
+      "status": "ok",
+      "count": 19
+    },
+    {
+      "repo": "cheahjs/free-llm-api-resources",
+      "path": "README.md",
+      "status": "ok",
+      "count": 26
+    },
+    {
+      "repo": "nejib1/Free-LLM",
+      "path": "README.md",
+      "status": "ok",
+      "count": 0
+    },
+    {
+      "repo": "for-the-zero/Free-LLM-Collection",
+      "path": "README.md",
+      "status": "ok",
+      "count": 22
+    },
+    {
+      "repo": "guihuashaoxiang/FreeLLM-API-KeyHub",
+      "path": "README.md",
+      "status": "ok",
+      "count": 0
+    }
+  ],
+  "count": 63
+}

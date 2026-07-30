@@ -379,24 +379,24 @@ export const SYNCED_FREE_LLM_PROVIDERS = [
         "rateLimit": "10 RPM, 50 RPD"
       },
       {
-        "id": "meta/Llama-4-Scout-17B-16E",
-        "name": "Llama-4-Scout-17B-16E",
+        "id": "meta/Llama-4-Scout-17B-16E-Instruct",
+        "name": "Llama-4-Scout-17B-16E-Instruct",
         "context": "512K",
         "maxOutput": "~4K",
         "modality": "Text + Vision",
         "rateLimit": "15 RPM, 150 RPD"
       },
       {
-        "id": "meta/Llama-4-Maverick-17B-128E",
-        "name": "Llama-4-Maverick-17B-128E",
+        "id": "meta/Llama-4-Maverick-17B-128E-Instruct-FP8",
+        "name": "Llama-4-Maverick-17B-128E-Instruct-FP8",
         "context": "256K",
         "maxOutput": "~4K",
         "modality": "Text + Vision",
         "rateLimit": "10 RPM, 50 RPD"
       },
       {
-        "id": "meta/Meta-Llama-3.3-70B",
-        "name": "Meta-Llama-3.3-70B",
+        "id": "meta/Llama-3.3-70B-Instruct",
+        "name": "Llama-3.3-70B-Instruct",
         "context": "131K",
         "maxOutput": "~4K",
         "modality": "Text",
@@ -411,7 +411,7 @@ export const SYNCED_FREE_LLM_PROVIDERS = [
         "rateLimit": "15 RPM, 150 RPD"
       },
       {
-        "id": "mistralai/Mistral-Small-3.1",
+        "id": "mistral-small-2503",
         "name": "Mistral-Small-3.1",
         "context": "128K",
         "maxOutput": "~4K",
@@ -491,7 +491,7 @@ export const SYNCED_FREE_LLM_PROVIDERS = [
     "auth": "见官网",
     "models": [
       {
-        "id": "meta-llama/Meta-Llama-3.1-8B-Instruct",
+        "id": "meta-llama/Llama-3.1-8B-Instruct",
         "name": "Meta-Llama-3.1-8B-Instruct",
         "context": "128K",
         "maxOutput": "~4K",
@@ -499,25 +499,25 @@ export const SYNCED_FREE_LLM_PROVIDERS = [
         "rateLimit": "Credit-metered"
       },
       {
-        "id": "mistralai/Mistral-7B-Instruct-v0.3",
-        "name": "Mistral-7B-Instruct-v0.3",
-        "context": "32K",
+        "id": "google/gemma-3-4b-it",
+        "name": "gemma-3-4b-it",
+        "context": "131K",
         "maxOutput": "~4K",
         "modality": "Text",
         "rateLimit": "Credit-metered"
       },
       {
-        "id": "mistralai/Mixtral-8x7B-Instruct-v0.1",
-        "name": "Mixtral-8x7B-Instruct-v0.1",
-        "context": "32K",
-        "maxOutput": "~4K",
-        "modality": "Text",
-        "rateLimit": "Credit-metered"
-      },
-      {
-        "id": "microsoft/Phi-3.5-mini-instruct",
-        "name": "Phi-3.5-mini-instruct",
+        "id": "microsoft/phi-4",
+        "name": "phi-4",
         "context": "128K",
+        "maxOutput": "~4K",
+        "modality": "Text",
+        "rateLimit": "Credit-metered"
+      },
+      {
+        "id": "Qwen/Qwen2.5-Coder-7B-Instruct",
+        "name": "Qwen2.5-Coder-7B-Instruct",
+        "context": "131K",
         "maxOutput": "~4K",
         "modality": "Text",
         "rateLimit": "Credit-metered"
@@ -715,11 +715,11 @@ export const SYNCED_FREE_LLM_PROVIDERS = [
     "auth": "见官网",
     "models": [
       {
-        "id": "deepseek-ai/deepseek-r1",
-        "name": "deepseek-ai/deepseek-r1",
-        "context": "128K",
-        "maxOutput": "~163K",
-        "modality": "Text (reasoning)",
+        "id": "deepseek-ai/deepseek-v4-flash",
+        "name": "deepseek-ai/deepseek-v4-flash",
+        "context": "1M",
+        "maxOutput": "~64K",
+        "modality": "Text",
         "rateLimit": "~40 RPM"
       },
       {
@@ -747,24 +747,24 @@ export const SYNCED_FREE_LLM_PROVIDERS = [
         "rateLimit": "~40 RPM"
       },
       {
-        "id": "meta/llama-3.1-405b-instruct",
-        "name": "meta/llama-3.1-405b-instruct",
+        "id": "meta/llama-3.3-70b-instruct",
+        "name": "meta/llama-3.3-70b-instruct",
         "context": "128K",
         "maxOutput": "4K",
         "modality": "Text",
         "rateLimit": "~40 RPM"
       },
       {
-        "id": "qwen/qwen2.5-72b-instruct",
-        "name": "qwen/qwen2.5-72b-instruct",
+        "id": "mistralai/mistral-nemotron",
+        "name": "mistralai/mistral-nemotron",
         "context": "128K",
         "maxOutput": "8K",
         "modality": "Text",
         "rateLimit": "~40 RPM"
       },
       {
-        "id": "google/gemma-4-31b",
-        "name": "google/gemma-4-31b",
+        "id": "google/gemma-4-31b-it",
+        "name": "google/gemma-4-31b-it",
         "context": "128K",
         "maxOutput": "8K",
         "modality": "Text",
@@ -1001,14 +1001,6 @@ export const SYNCED_FREE_LLM_PROVIDERS = [
       {
         "id": "Meta-Llama-3_3-70B-Instruct",
         "name": "Meta-Llama-3_3-70B-Instruct",
-        "context": "131K",
-        "maxOutput": "~4K",
-        "modality": "Text",
-        "rateLimit": "2 RPM (anonymous)"
-      },
-      {
-        "id": "Llama-3.1-8B-Instruct",
-        "name": "Llama-3.1-8B-Instruct",
         "context": "131K",
         "maxOutput": "~4K",
         "modality": "Text",
@@ -1657,7 +1649,7 @@ export const SYNCED_FREE_LLM_PROVIDERS = [
   }
 ];
 export const FREE_LLM_SYNC_META = {
-  "generatedAt": "2026-07-30T08:51:06.055Z",
+  "generatedAt": "2026-07-30T14:33:27.400Z",
   "sources": [
     {
       "repo": "mnfst/awesome-free-llm-apis",

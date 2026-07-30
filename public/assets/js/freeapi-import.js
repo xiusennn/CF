@@ -26,8 +26,24 @@ export const SYNCED_FREE_LLM_PROVIDERS = [
         "id": "aion-rp-llama-3.1-8b",
         "name": "Aion-RP 1.0 (8B)",
         "context": "32K",
-        "maxOutput": "~8K",
+        "maxOutput": "32K",
         "modality": "Text (roleplay)",
+        "rateLimit": "15 RPM, 20K TPD"
+      },
+      {
+        "id": "aion-3.0",
+        "name": "Aion 3.0",
+        "context": "128K",
+        "maxOutput": "32K",
+        "modality": "Text (roleplay, reasoning)",
+        "rateLimit": "15 RPM, 20K TPD"
+      },
+      {
+        "id": "aion-3.0-mini",
+        "name": "Aion 3.0 Mini",
+        "context": "128K",
+        "maxOutput": "32K",
+        "modality": "Text (roleplay, reasoning)",
         "rateLimit": "15 RPM, 20K TPD"
       }
     ],
@@ -45,16 +61,16 @@ export const SYNCED_FREE_LLM_PROVIDERS = [
       {
         "id": "command-a-plus-05-2026",
         "name": "Command A+ (218B)",
-        "context": "128K",
-        "maxOutput": "4K",
-        "modality": "Text",
+        "context": "436K",
+        "maxOutput": "64K",
+        "modality": "Text + Image",
         "rateLimit": "20 RPM"
       },
       {
         "id": "command-a-03-2025",
         "name": "Command A (111B)",
-        "context": "256K",
-        "maxOutput": "4K",
+        "context": "288K",
+        "maxOutput": "8K",
         "modality": "Text",
         "rateLimit": "20 RPM"
       },
@@ -81,6 +97,54 @@ export const SYNCED_FREE_LLM_PROVIDERS = [
         "maxOutput": "4K",
         "modality": "Text",
         "rateLimit": "20 RPM"
+      },
+      {
+        "id": "command-a-reasoning-08-2025",
+        "name": "Command A Reasoning",
+        "context": "288K",
+        "maxOutput": "~4K",
+        "modality": "Text (reasoning)",
+        "rateLimit": "20 RPM"
+      },
+      {
+        "id": "command-a-translate-08-2025",
+        "name": "Command A Translate",
+        "context": "~9K",
+        "maxOutput": "~4K",
+        "modality": "Text",
+        "rateLimit": "20 RPM"
+      },
+      {
+        "id": "command-a-vision-07-2025",
+        "name": "Command A Vision",
+        "context": "128K",
+        "maxOutput": "~4K",
+        "modality": "Text + Image",
+        "rateLimit": "20 RPM"
+      },
+      {
+        "id": "command-r7b-arabic-02-2025",
+        "name": "Command R7B Arabic",
+        "context": "128K",
+        "maxOutput": "~4K",
+        "modality": "Text",
+        "rateLimit": "20 RPM"
+      },
+      {
+        "id": "c4ai-aya-expanse-32b",
+        "name": "Aya Expanse 32B",
+        "context": "128K",
+        "maxOutput": "~4K",
+        "modality": "Text",
+        "rateLimit": "20 RPM"
+      },
+      {
+        "id": "c4ai-aya-vision-32b",
+        "name": "Aya Vision 32B",
+        "context": "16K",
+        "maxOutput": "~4K",
+        "modality": "Text + Image",
+        "rateLimit": "20 RPM"
       }
     ],
     "limits": "见上游",
@@ -95,12 +159,28 @@ export const SYNCED_FREE_LLM_PROVIDERS = [
     "auth": "见官网",
     "models": [
       {
+        "id": "gemini-3.6-flash",
+        "name": "Gemini 3.6 Flash",
+        "context": "1M",
+        "maxOutput": "65K",
+        "modality": "Text + Image + Audio + Video",
+        "rateLimit": "15 RPM, 1,500 RPD"
+      },
+      {
         "id": "gemini-3.5-flash",
         "name": "Gemini 3.5 Flash",
         "context": "1M",
-        "maxOutput": "64K",
+        "maxOutput": "65K",
         "modality": "Text + Image + Audio + Video",
         "rateLimit": "15 RPM, 1,500 RPD"
+      },
+      {
+        "id": "gemini-3.5-flash-lite",
+        "name": "Gemini 3.5 Flash-Lite",
+        "context": "1M",
+        "maxOutput": "65K",
+        "modality": "Text + Image + Audio + Video",
+        "rateLimit": "30 RPM, 1,500 RPD"
       },
       {
         "id": "gemini-3.1-flash-lite",
@@ -119,9 +199,17 @@ export const SYNCED_FREE_LLM_PROVIDERS = [
         "rateLimit": "15 RPM, 1,500 RPD"
       },
       {
+        "id": "gemini-2.5-flash-lite",
+        "name": "Gemini 2.5 Flash-Lite",
+        "context": "1M",
+        "maxOutput": "65K",
+        "modality": "Text + Image + Audio + Video",
+        "rateLimit": "30 RPM, 1,500 RPD"
+      },
+      {
         "id": "gemini-2.5-pro",
         "name": "Gemini 2.5 Pro",
-        "context": "2M",
+        "context": "1M",
         "maxOutput": "65K",
         "modality": "Text + Image + Audio + Video",
         "rateLimit": "5 RPM, 50 RPD"
@@ -155,7 +243,7 @@ export const SYNCED_FREE_LLM_PROVIDERS = [
         "rateLimit": "~1 RPS, 500K TPM"
       },
       {
-        "id": "mistral-large-2411",
+        "id": "mistral-large-2512",
         "name": "Mistral Large 3",
         "context": "256K",
         "maxOutput": "256K",
@@ -163,15 +251,15 @@ export const SYNCED_FREE_LLM_PROVIDERS = [
         "rateLimit": "~1 RPS, 500K TPM"
       },
       {
-        "id": "open-mistral-nemo",
-        "name": "Mistral Nemo (12B)",
-        "context": "128K",
-        "maxOutput": "128K",
+        "id": "ministral-8b-2512",
+        "name": "Ministral 8B",
+        "context": "256K",
+        "maxOutput": "256K",
         "modality": "Text",
         "rateLimit": "~1 RPS, 500K TPM"
       },
       {
-        "id": "codestral-2501",
+        "id": "codestral-2508",
         "name": "Codestral",
         "context": "256K",
         "maxOutput": "256K",
@@ -179,11 +267,19 @@ export const SYNCED_FREE_LLM_PROVIDERS = [
         "rateLimit": "~1 RPS, 500K TPM"
       },
       {
-        "id": "pixtral-large-2411",
-        "name": "Pixtral Large",
+        "id": "ministral-3b-2512",
+        "name": "Ministral 3B",
         "context": "128K",
         "maxOutput": "128K",
-        "modality": "Text + Image",
+        "modality": "Text",
+        "rateLimit": "~1 RPS, 500K TPM"
+      },
+      {
+        "id": "ministral-14b-2512",
+        "name": "Ministral 14B",
+        "context": "256K",
+        "maxOutput": "256K",
+        "modality": "Text",
         "rateLimit": "~1 RPS, 500K TPM"
       }
     ],
@@ -203,7 +299,15 @@ export const SYNCED_FREE_LLM_PROVIDERS = [
         "name": "GLM-4.7-Flash",
         "context": "200K",
         "maxOutput": "128K",
-        "modality": "Text",
+        "modality": "Text (reasoning)",
+        "rateLimit": "1 concurrent request"
+      },
+      {
+        "id": "glm-4.5-flash",
+        "name": "GLM-4.5-Flash",
+        "context": "128K",
+        "maxOutput": "~96K",
+        "modality": "Text (reasoning)",
         "rateLimit": "1 concurrent request"
       },
       {
@@ -222,25 +326,33 @@ export const SYNCED_FREE_LLM_PROVIDERS = [
   {
     "name": "Cerebras",
     "url": "https://cloud.cerebras.ai/",
-    "type": "试用 Token / 注册赠送额度",
+    "type": "限速免费",
     "region": "待确认",
     "auth": "见官网",
     "models": [
       {
         "id": "gpt-oss-120b",
         "name": "gpt-oss-120b",
-        "context": "128K (8K on free)",
-        "maxOutput": "8K",
+        "context": "131K (65K on free)",
+        "maxOutput": "32K (free) / 40K (paid)",
         "modality": "Text",
-        "rateLimit": "30 RPM, 14,400 RPD, 1M TPD"
+        "rateLimit": "5 RPM, 30K TPM, 1M TPD"
       },
       {
         "id": "zai-glm-4.7",
-        "name": "zai-glm-4.7",
-        "context": "128K (8K on free)",
-        "maxOutput": "8K",
+        "name": "zai-glm-4.7 (deprecated Aug 2026)",
+        "context": "131K (64K on free)",
+        "maxOutput": "40K",
         "modality": "Text",
-        "rateLimit": "10 RPM, 100 RPD, 1M TPD"
+        "rateLimit": "5 RPM, 30K TPM, 1M TPD"
+      },
+      {
+        "id": "gemma-4-31b",
+        "name": "gemma-4-31b",
+        "context": "131K (65K on free)",
+        "maxOutput": "32K (free) / 40K (paid)",
+        "modality": "Text + Image",
+        "rateLimit": "15 RPM, 30K TPM, 1M TPD"
       }
     ],
     "limits": "见上游",
@@ -452,29 +564,45 @@ export const SYNCED_FREE_LLM_PROVIDERS = [
         "context": "131K",
         "maxOutput": "131K",
         "modality": "Text",
-        "rateLimit": "30 RPM, 1,000 RPD"
+        "rateLimit": "30 RPM, 14,400 RPD"
       },
       {
-        "id": "llama-4-scout-17b-16e-instruct",
-        "name": "llama-4-scout-17b-16e-instruct",
+        "id": "openai/gpt-oss-120b",
+        "name": "openai/gpt-oss-120b",
         "context": "131K",
-        "maxOutput": "8K",
-        "modality": "Text + Vision",
-        "rateLimit": "30 RPM, 1,000 RPD"
-      },
-      {
-        "id": "qwen3-32b",
-        "name": "qwen3-32b",
-        "context": "131K",
-        "maxOutput": "131K",
+        "maxOutput": "65K",
         "modality": "Text",
         "rateLimit": "30 RPM, 1,000 RPD"
       },
       {
-        "id": "gpt-oss-120b",
-        "name": "gpt-oss-120b",
+        "id": "openai/gpt-oss-20b",
+        "name": "openai/gpt-oss-20b",
         "context": "131K",
-        "maxOutput": "32K",
+        "maxOutput": "65K",
+        "modality": "Text",
+        "rateLimit": "30 RPM, 1,000 RPD"
+      },
+      {
+        "id": "groq/compound",
+        "name": "groq/compound",
+        "context": "131K",
+        "maxOutput": "8K",
+        "modality": "Text",
+        "rateLimit": "30 RPM, 250 RPD"
+      },
+      {
+        "id": "groq/compound-mini",
+        "name": "groq/compound-mini",
+        "context": "131K",
+        "maxOutput": "8K",
+        "modality": "Text",
+        "rateLimit": "30 RPM, 250 RPD"
+      },
+      {
+        "id": "qwen/qwen3.6-27b",
+        "name": "qwen/qwen3.6-27b",
+        "context": "131K",
+        "maxOutput": "16K",
         "modality": "Text",
         "rateLimit": "30 RPM, 1,000 RPD"
       }
@@ -509,7 +637,7 @@ export const SYNCED_FREE_LLM_PROVIDERS = [
       {
         "id": "microsoft/phi-4",
         "name": "phi-4",
-        "context": "128K",
+        "context": "16K",
         "maxOutput": "~4K",
         "modality": "Text",
         "rateLimit": "Credit-metered"
@@ -551,26 +679,18 @@ export const SYNCED_FREE_LLM_PROVIDERS = [
     "auth": "见官网",
     "models": [
       {
-        "id": "x-ai/grok-code-fast-1:free",
-        "name": "x-ai/grok-code-fast-1:free",
-        "context": "256K",
-        "maxOutput": "—",
-        "modality": "Text (code)",
-        "rateLimit": "~200 req/hr"
-      },
-      {
-        "id": "minimax/minimax-m2.5:free",
-        "name": "minimax/minimax-m2.5:free",
-        "context": "196K",
-        "maxOutput": "8K",
+        "id": "nvidia/nemotron-3-ultra-550b-a55b:free",
+        "name": "nvidia/nemotron-3-ultra-550b-a55b:free",
+        "context": "1M",
+        "maxOutput": "65K",
         "modality": "Text",
         "rateLimit": "~200 req/hr"
       },
       {
-        "id": "bytedance-seed/dola-seed-2.0-pro:free",
-        "name": "bytedance-seed/dola-seed-2.0-pro:free",
-        "context": "—",
-        "maxOutput": "—",
+        "id": "stepfun/step-3.7-flash:free",
+        "name": "stepfun/step-3.7-flash:free",
+        "context": "262K",
+        "maxOutput": "262K",
         "modality": "Text",
         "rateLimit": "~200 req/hr"
       },
@@ -578,16 +698,48 @@ export const SYNCED_FREE_LLM_PROVIDERS = [
         "id": "nvidia/nemotron-3-super-120b-a12b:free",
         "name": "nvidia/nemotron-3-super-120b-a12b:free",
         "context": "262K",
+        "maxOutput": "262K",
+        "modality": "Text",
+        "rateLimit": "~200 req/hr"
+      },
+      {
+        "id": "nvidia/nemotron-3-nano-omni-30b-a3b-reasoning:free",
+        "name": "nvidia/nemotron-3-nano-omni-30b-a3b-reasoning:free",
+        "context": "256K",
+        "maxOutput": "65K",
+        "modality": "Text (reasoning)",
+        "rateLimit": "~200 req/hr"
+      },
+      {
+        "id": "inclusionai/ling-3.0-flash:free",
+        "name": "inclusionai/ling-3.0-flash:free",
+        "context": "262K",
         "maxOutput": "32K",
         "modality": "Text",
         "rateLimit": "~200 req/hr"
       },
       {
-        "id": "arcee-ai/trinity-large-thinking:free",
-        "name": "arcee-ai/trinity-large-thinking:free",
-        "context": "—",
-        "maxOutput": "—",
-        "modality": "Text (reasoning)",
+        "id": "poolside/laguna-s-2.1:free",
+        "name": "poolside/laguna-s-2.1:free",
+        "context": "262K",
+        "maxOutput": "32K",
+        "modality": "Text (code)",
+        "rateLimit": "~200 req/hr"
+      },
+      {
+        "id": "poolside/laguna-xs-2.1:free",
+        "name": "poolside/laguna-xs-2.1:free",
+        "context": "262K",
+        "maxOutput": "32K",
+        "modality": "Text (code)",
+        "rateLimit": "~200 req/hr"
+      },
+      {
+        "id": "cohere/north-mini-code:free",
+        "name": "cohere/north-mini-code:free",
+        "context": "256K",
+        "maxOutput": "64K",
+        "modality": "Text (code)",
         "rateLimit": "~200 req/hr"
       },
       {
@@ -779,16 +931,56 @@ export const SYNCED_FREE_LLM_PROVIDERS = [
         "rateLimit": "~40 RPM"
       },
       {
-        "id": "minimax/minimax-m2.7",
-        "name": "minimax/minimax-m2.7",
+        "id": "minimaxai/minimax-m3",
+        "name": "minimaxai/minimax-m3",
+        "context": "1M",
+        "maxOutput": "~64K",
+        "modality": "Text",
+        "rateLimit": "~40 RPM"
+      },
+      {
+        "id": "mistralai/mistral-medium-3.5-128b",
+        "name": "mistralai/mistral-medium-3.5-128b",
+        "context": "262K",
+        "maxOutput": "262K",
+        "modality": "Text",
+        "rateLimit": "~40 RPM"
+      },
+      {
+        "id": "nvidia/nemotron-3-ultra-550b-a55b",
+        "name": "nvidia/nemotron-3-ultra-550b-a55b",
+        "context": "262K",
+        "maxOutput": "262K",
+        "modality": "Text",
+        "rateLimit": "~40 RPM"
+      },
+      {
+        "id": "openai/gpt-oss-120b",
+        "name": "openai/gpt-oss-120b",
+        "context": "131K",
+        "maxOutput": "131K",
+        "modality": "Text",
+        "rateLimit": "~40 RPM"
+      },
+      {
+        "id": "openai/gpt-oss-20b",
+        "name": "openai/gpt-oss-20b",
+        "context": "131K",
+        "maxOutput": "131K",
+        "modality": "Text",
+        "rateLimit": "~40 RPM"
+      },
+      {
+        "id": "deepseek-ai/deepseek-v4-pro",
+        "name": "deepseek-ai/deepseek-v4-pro",
         "context": "128K",
-        "maxOutput": "8K",
+        "maxOutput": "~64K",
         "modality": "Text",
         "rateLimit": "~40 RPM"
       },
       {
         "id": null,
-        "name": "+ 90 more models",
+        "name": "+ 85 more models",
         "context": "Varies",
         "maxOutput": "Varies",
         "modality": "Text, Image, Video, Speech, Embeddings",
@@ -807,56 +999,80 @@ export const SYNCED_FREE_LLM_PROVIDERS = [
     "auth": "见官网",
     "models": [
       {
-        "id": "gpt-oss:120b-cloud",
-        "name": "gpt-oss:120b-cloud",
+        "id": "deepseek-v4-pro",
+        "name": "deepseek-v4-pro",
         "context": "128K",
         "maxOutput": "Model-dependent",
         "modality": "Text",
         "rateLimit": "Session/weekly limits (unpublished)"
       },
       {
-        "id": "deepseek-v3.1:671b-cloud",
-        "name": "deepseek-v3.1:671b-cloud",
+        "id": "deepseek-v4-flash",
+        "name": "deepseek-v4-flash",
+        "context": "1M",
+        "maxOutput": "Model-dependent",
+        "modality": "Text",
+        "rateLimit": "Session/weekly limits (unpublished)"
+      },
+      {
+        "id": "minimax-m3",
+        "name": "minimax-m3",
+        "context": "1M",
+        "maxOutput": "Model-dependent",
+        "modality": "Text",
+        "rateLimit": "Session/weekly limits (unpublished)"
+      },
+      {
+        "id": "kimi-k3",
+        "name": "kimi-k3",
         "context": "128K",
         "maxOutput": "Model-dependent",
         "modality": "Text",
         "rateLimit": "Session/weekly limits (unpublished)"
       },
       {
-        "id": "qwen3-coder:480b-cloud",
-        "name": "qwen3-coder:480b-cloud",
+        "id": "gpt-oss:120b",
+        "name": "gpt-oss:120b",
         "context": "128K",
         "maxOutput": "Model-dependent",
-        "modality": "Text (code)",
+        "modality": "Text",
         "rateLimit": "Session/weekly limits (unpublished)"
       },
       {
-        "id": "kimi-k2:1t-cloud",
-        "name": "kimi-k2:1t-cloud",
+        "id": "gpt-oss:20b",
+        "name": "gpt-oss:20b",
+        "context": "131K",
+        "maxOutput": "Model-dependent",
+        "modality": "Text",
+        "rateLimit": "Session/weekly limits (unpublished)"
+      },
+      {
+        "id": "nemotron-3-ultra",
+        "name": "nemotron-3-ultra",
         "context": "262K",
         "maxOutput": "Model-dependent",
         "modality": "Text",
         "rateLimit": "Session/weekly limits (unpublished)"
       },
       {
-        "id": "glm-4.6:cloud",
-        "name": "glm-4.6:cloud",
+        "id": "mistral-large-3:675b",
+        "name": "mistral-large-3:675b",
         "context": "128K",
         "maxOutput": "Model-dependent",
         "modality": "Text",
         "rateLimit": "Session/weekly limits (unpublished)"
       },
       {
-        "id": "deepseek-r1:cloud",
-        "name": "deepseek-r1:cloud",
-        "context": "128K",
+        "id": "qwen3.5:397b",
+        "name": "qwen3.5:397b",
+        "context": "131K",
         "maxOutput": "Model-dependent",
-        "modality": "Text (reasoning)",
+        "modality": "Text",
         "rateLimit": "Session/weekly limits (unpublished)"
       },
       {
         "id": null,
-        "name": "+ 30 more cloud models",
+        "name": "+ 10 more cloud models",
         "context": "Varies",
         "maxOutput": "Varies",
         "modality": "Text",
@@ -875,84 +1091,92 @@ export const SYNCED_FREE_LLM_PROVIDERS = [
     "auth": "见官网",
     "models": [
       {
-        "id": "qwen/qwen3-coder:free",
-        "name": "qwen/qwen3-coder:free",
-        "context": "1M",
-        "maxOutput": "262K",
-        "modality": "Text (code)",
-        "rateLimit": "20 RPM, 200 RPD"
-      },
-      {
-        "id": "nvidia/nemotron-3-ultra-550b-a55b:free",
-        "name": "nvidia/nemotron-3-ultra-550b-a55b:free",
-        "context": "1M",
-        "maxOutput": "65K",
-        "modality": "Text",
-        "rateLimit": "20 RPM, 200 RPD"
-      },
-      {
         "id": "nvidia/nemotron-3-super-120b-a12b:free",
         "name": "nvidia/nemotron-3-super-120b-a12b:free",
-        "context": "1M",
+        "context": "262K",
         "maxOutput": "262K",
         "modality": "Text",
-        "rateLimit": "20 RPM, 200 RPD"
-      },
-      {
-        "id": "openai/gpt-oss-120b:free",
-        "name": "openai/gpt-oss-120b:free",
-        "context": "131K",
-        "maxOutput": "131K",
-        "modality": "Text",
-        "rateLimit": "20 RPM, 200 RPD"
+        "rateLimit": "20 RPM, 50 RPD"
       },
       {
         "id": "openai/gpt-oss-20b:free",
         "name": "openai/gpt-oss-20b:free",
         "context": "131K",
-        "maxOutput": "8K",
+        "maxOutput": "32K",
         "modality": "Text",
-        "rateLimit": "20 RPM, 200 RPD"
+        "rateLimit": "20 RPM, 50 RPD"
       },
       {
-        "id": "meta-llama/llama-3.3-70b-instruct:free",
-        "name": "meta-llama/llama-3.3-70b-instruct:free",
-        "context": "131K",
-        "maxOutput": "~16K",
-        "modality": "Text",
-        "rateLimit": "20 RPM, 200 RPD"
+        "id": "cohere/north-mini-code:free",
+        "name": "cohere/north-mini-code:free",
+        "context": "256K",
+        "maxOutput": "64K",
+        "modality": "Text (code)",
+        "rateLimit": "20 RPM, 50 RPD"
       },
       {
-        "id": "nousresearch/hermes-3-llama-3.1-405b:free",
-        "name": "nousresearch/hermes-3-llama-3.1-405b:free",
-        "context": "131K",
-        "maxOutput": "~16K",
-        "modality": "Text",
-        "rateLimit": "20 RPM, 200 RPD"
+        "id": "google/gemma-4-26b-a4b-it:free",
+        "name": "google/gemma-4-26b-a4b-it:free",
+        "context": "262K",
+        "maxOutput": "32K",
+        "modality": "Text + Image",
+        "rateLimit": "20 RPM, 50 RPD"
       },
       {
         "id": "google/gemma-4-31b-it:free",
         "name": "google/gemma-4-31b-it:free",
         "context": "262K",
         "maxOutput": "32K",
-        "modality": "Multimodal",
-        "rateLimit": "20 RPM, 200 RPD"
+        "modality": "Text + Image",
+        "rateLimit": "20 RPM, 50 RPD"
       },
       {
-        "id": "poolside/laguna-m.1:free",
-        "name": "poolside/laguna-m.1:free",
+        "id": "inclusionai/ling-3.0-flash:free",
+        "name": "inclusionai/ling-3.0-flash:free",
         "context": "262K",
         "maxOutput": "32K",
         "modality": "Text",
-        "rateLimit": "20 RPM, 200 RPD"
+        "rateLimit": "20 RPM, 50 RPD"
       },
       {
-        "id": "qwen/qwen3-next-80b-a3b-instruct:free",
-        "name": "qwen/qwen3-next-80b-a3b-instruct:free",
-        "context": "262K",
-        "maxOutput": "~32K",
+        "id": "nvidia/nemotron-3-nano-30b-a3b:free",
+        "name": "nvidia/nemotron-3-nano-30b-a3b:free",
+        "context": "256K",
+        "maxOutput": "—",
         "modality": "Text",
-        "rateLimit": "20 RPM, 200 RPD"
+        "rateLimit": "20 RPM, 50 RPD"
+      },
+      {
+        "id": "nvidia/nemotron-nano-9b-v2:free",
+        "name": "nvidia/nemotron-nano-9b-v2:free",
+        "context": "128K",
+        "maxOutput": "—",
+        "modality": "Text",
+        "rateLimit": "20 RPM, 50 RPD"
+      },
+      {
+        "id": "nvidia/nemotron-nano-12b-v2-vl:free",
+        "name": "nvidia/nemotron-nano-12b-v2-vl:free",
+        "context": "128K",
+        "maxOutput": "128K",
+        "modality": "Text + Image",
+        "rateLimit": "20 RPM, 50 RPD"
+      },
+      {
+        "id": "poolside/laguna-s-2.1:free",
+        "name": "poolside/laguna-s-2.1:free",
+        "context": "262K",
+        "maxOutput": "32K",
+        "modality": "Text (code)",
+        "rateLimit": "20 RPM, 50 RPD"
+      },
+      {
+        "id": "poolside/laguna-xs-2.1:free",
+        "name": "poolside/laguna-xs-2.1:free",
+        "context": "262K",
+        "maxOutput": "32K",
+        "modality": "Text (code)",
+        "rateLimit": "20 RPM, 50 RPD"
       },
       {
         "id": null,
@@ -960,7 +1184,7 @@ export const SYNCED_FREE_LLM_PROVIDERS = [
         "context": "Varies",
         "maxOutput": "Varies",
         "modality": "Text / Image",
-        "rateLimit": "20 RPM, 200 RPD"
+        "rateLimit": "20 RPM, 50 RPD"
       }
     ],
     "limits": "见上游",
@@ -1102,7 +1326,7 @@ export const SYNCED_FREE_LLM_PROVIDERS = [
         "id": "Meta-Llama-3.3-70B-Instruct",
         "name": "Meta-Llama-3.3-70B-Instruct",
         "context": "128K",
-        "maxOutput": "~8K",
+        "maxOutput": "~3K",
         "modality": "Text",
         "rateLimit": "20 RPM, 20 RPD, 200K TPD"
       },
@@ -1110,7 +1334,7 @@ export const SYNCED_FREE_LLM_PROVIDERS = [
         "id": "gpt-oss-120b",
         "name": "gpt-oss-120b",
         "context": "128K",
-        "maxOutput": "~8K",
+        "maxOutput": "~128K",
         "modality": "Text",
         "rateLimit": "20 RPM, 20 RPD, 200K TPD"
       },
@@ -1118,7 +1342,7 @@ export const SYNCED_FREE_LLM_PROVIDERS = [
         "id": "MiniMax-M2.7",
         "name": "MiniMax-M2.7",
         "context": "128K",
-        "maxOutput": "~8K",
+        "maxOutput": "~192K",
         "modality": "Text",
         "rateLimit": "20 RPM, 20 RPD, 200K TPD"
       },
@@ -1126,8 +1350,8 @@ export const SYNCED_FREE_LLM_PROVIDERS = [
         "id": "gemma-4-31B-it",
         "name": "gemma-4-31B-it (Preview)",
         "context": "128K",
-        "maxOutput": "~8K",
-        "modality": "Text",
+        "maxOutput": "~128K",
+        "modality": "Text + Image + Video",
         "rateLimit": "20 RPM, 20 RPD, 200K TPD"
       }
     ],
@@ -1649,7 +1873,7 @@ export const SYNCED_FREE_LLM_PROVIDERS = [
   }
 ];
 export const FREE_LLM_SYNC_META = {
-  "generatedAt": "2026-07-30T14:33:27.400Z",
+  "generatedAt": "2026-07-30T19:53:25.488Z",
   "sources": [
     {
       "repo": "mnfst/awesome-free-llm-apis",

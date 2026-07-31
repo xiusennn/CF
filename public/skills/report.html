@@ -4,11 +4,11 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>全库 Agent Skills 安全与许可证体检报告 | ToolHub</title>
-<meta name="description" content="全库 162529 条 Agent Skills 的安全规则命中、许可证与重复情况统计。">
+<meta name="description" content="全库 162928 条 Agent Skills 的安全规则命中、许可证与重复情况统计。">
 <meta name="robots" content="index,follow">
 <link rel="canonical" href="https://tool.cnagt.com/skills/report">
 <meta property="og:title" content="全库 Agent Skills 安全与许可证体检报告 | ToolHub">
-<meta property="og:description" content="全库 162529 条 Agent Skills 的安全规则命中、许可证与重复情况统计。">
+<meta property="og:description" content="全库 162928 条 Agent Skills 的安全规则命中、许可证与重复情况统计。">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://tool.cnagt.com/skills/report">
 <meta property="og:site_name" content="ToolHub">
@@ -19,7 +19,7 @@
 <meta property="og:image:alt" content="ToolHub — 本地优先的 AI 工具与 Skills 目录">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="全库 Agent Skills 安全与许可证体检报告 | ToolHub">
-<meta name="twitter:description" content="全库 162529 条 Agent Skills 的安全规则命中、许可证与重复情况统计。">
+<meta name="twitter:description" content="全库 162928 条 Agent Skills 的安全规则命中、许可证与重复情况统计。">
 <meta name="twitter:image" content="https://tool.cnagt.com/assets/brand/og-default.png">
 <meta name="theme-color" content="#f7f9fc">
 <link rel="icon" type="image/svg+xml" href="/assets/brand/toolhub-mark.svg">
@@ -43,101 +43,101 @@
 <div class="crumbs"><a href="/">首页</a> / <a href="/skills">Skills 目录</a> / <a href="/skills/top/">榜单</a></div>
 <header class="sk-hero"><span class="eyebrow">LIBRARY REPORT</span>
 <h1>全库 Agent Skills 安全与许可证体检报告</h1>
-<p>对全库 <strong>162,529</strong> 条 Agent Skills 逐条扫描后的统计（快照 2026-07-31）：<strong>23.9%</strong> 至少命中一条安全规则，<strong>27.9%</strong> 没有声明许可证。数据可引用，请注明快照日期。</p></header>
+<p>对全库 <strong>162,928</strong> 条 Agent Skills 逐条扫描后的统计（快照 2026-07-31）：<strong>23.9%</strong> 至少命中一条安全规则，<strong>27.8%</strong> 没有声明许可证。数据可引用，请注明快照日期。</p></header>
 <div class="sk-report-grid">
-<p class="sk-stat"><strong>23.9%</strong><span>至少命中一条安全规则（38,813 条）</span></p>
-<p class="sk-stat"><strong>1.9%</strong><span>高风险（3,022 条）</span></p>
-<p class="sk-stat"><strong>27.9%</strong><span>未声明许可证，默认不可商用</span></p>
-<p class="sk-stat"><strong>38.4%</strong><span>存在几乎完全相同的副本</span></p>
+<p class="sk-stat"><strong>23.9%</strong><span>至少命中一条安全规则（38,936 条）</span></p>
+<p class="sk-stat"><strong>1.9%</strong><span>高风险（3,025 条）</span></p>
+<p class="sk-stat"><strong>27.8%</strong><span>未声明许可证，默认不可商用</span></p>
+<p class="sk-stat"><strong>38.5%</strong><span>存在几乎完全相同的副本</span></p>
 </div>
 <h2>安全规则命中分布</h2>
-<table class="sk-report-table"><thead><tr><th>规则</th><th>含义</th><th>数量</th><th>占比</th></tr></thead><tbody><tr><td>涉及密钥 / 凭据</td><td>SKILL.md 中出现 API Key、token 等字样，安装后可能要求你提供凭据。</td><td>32,277</td><td>19.9%</td></tr><tr><td>执行代码</td><td>会在你的机器上运行脚本或命令。</td><td>2,149</td><td>1.3%</td></tr><tr><td>提权</td><td>包含 sudo / 管理员权限相关操作。</td><td>1,919</td><td>1.2%</td></tr><tr><td>数据外发</td><td>存在将本地数据发送到外部地址的行为。</td><td>1,526</td><td>0.9%</td></tr><tr><td>删除文件</td><td>会删除或覆盖本地文件。</td><td>1,403</td><td>0.9%</td></tr><tr><td>远程脚本直接执行</td><td>类似 curl | sh 的写法，下载内容会直接执行。</td><td>1,101</td><td>0.7%</td></tr><tr><td>调用外部可执行文件</td><td>依赖仓库外的二进制程序。</td><td>873</td><td>0.5%</td></tr><tr><td>修改执行权限</td><td>会给文件加上可执行权限。</td><td>783</td><td>0.5%</td></tr><tr><td>高危删除命令</td><td>包含 rm -rf 类不可逆命令。</td><td>407</td><td>0.3%</td></tr><tr><td>提示词注入风险</td><td>文本中含有试图接管模型行为的指令。</td><td>282</td><td>0.2%</td></tr><tr><td>PowerShell 动态执行</td><td>使用 IEX 执行动态拼接的命令。</td><td>42</td><td>0.0%</td></tr><tr><td>混淆后执行</td><td>存在编码 / 混淆后再 eval 的代码。</td><td>20</td><td>0.0%</td></tr><tr><td>jailbreak</td><td></td><td>7</td><td>0.0%</td></tr></tbody></table>
+<table class="sk-report-table"><thead><tr><th>规则</th><th>含义</th><th>数量</th><th>占比</th></tr></thead><tbody><tr><td>涉及密钥 / 凭据</td><td>SKILL.md 中出现 API Key、token 等字样，安装后可能要求你提供凭据。</td><td>32,389</td><td>19.9%</td></tr><tr><td>执行代码</td><td>会在你的机器上运行脚本或命令。</td><td>2,150</td><td>1.3%</td></tr><tr><td>提权</td><td>包含 sudo / 管理员权限相关操作。</td><td>1,920</td><td>1.2%</td></tr><tr><td>数据外发</td><td>存在将本地数据发送到外部地址的行为。</td><td>1,526</td><td>0.9%</td></tr><tr><td>删除文件</td><td>会删除或覆盖本地文件。</td><td>1,409</td><td>0.9%</td></tr><tr><td>远程脚本直接执行</td><td>类似 curl | sh 的写法，下载内容会直接执行。</td><td>1,101</td><td>0.7%</td></tr><tr><td>调用外部可执行文件</td><td>依赖仓库外的二进制程序。</td><td>873</td><td>0.5%</td></tr><tr><td>修改执行权限</td><td>会给文件加上可执行权限。</td><td>786</td><td>0.5%</td></tr><tr><td>高危删除命令</td><td>包含 rm -rf 类不可逆命令。</td><td>410</td><td>0.3%</td></tr><tr><td>提示词注入风险</td><td>文本中含有试图接管模型行为的指令。</td><td>282</td><td>0.2%</td></tr><tr><td>PowerShell 动态执行</td><td>使用 IEX 执行动态拼接的命令。</td><td>42</td><td>0.0%</td></tr><tr><td>混淆后执行</td><td>存在编码 / 混淆后再 eval 的代码。</td><td>20</td><td>0.0%</td></tr><tr><td>jailbreak</td><td></td><td>7</td><td>0.0%</td></tr></tbody></table>
 <h2>许可证分布</h2>
-<table class="sk-report-table"><thead><tr><th>结论</th><th>说明</th><th>数量</th><th>占比</th></tr></thead><tbody><tr><td>宽松许可证</td><td>通常可商用，保留版权声明即可。</td><td>108,991</td><td>67.1%</td></tr><tr><td>未声明许可证</td><td>默认保留全部权利，商用前需联系作者。</td><td>45,353</td><td>27.9%</td></tr><tr><td>传染性许可证</td><td>衍生作品可能需要以相同许可证开源。</td><td>7,987</td><td>4.9%</td></tr><tr><td>其他许可证</td><td>条款非标准，商用前请逐条阅读。</td><td>198</td><td>0.1%</td></tr></tbody></table>
+<table class="sk-report-table"><thead><tr><th>结论</th><th>说明</th><th>数量</th><th>占比</th></tr></thead><tbody><tr><td>宽松许可证</td><td>通常可商用，保留版权声明即可。</td><td>109,384</td><td>67.1%</td></tr><tr><td>未声明许可证</td><td>默认保留全部权利，商用前需联系作者。</td><td>45,357</td><td>27.8%</td></tr><tr><td>传染性许可证</td><td>衍生作品可能需要以相同许可证开源。</td><td>7,989</td><td>4.9%</td></tr><tr><td>其他许可证</td><td>条款非标准，商用前请逐条阅读。</td><td>198</td><td>0.1%</td></tr></tbody></table>
 <h2>分类分布</h2>
-<table class="sk-report-table"><thead><tr><th>分类</th><th></th><th>数量</th><th>占比</th></tr></thead><tbody><tr><td>其他</td><td></td><td>62,172</td><td>38.3%</td></tr><tr><td><a href="/skills/c/security">测试与安全</a></td><td></td><td>20,121</td><td>12.4%</td></tr><tr><td><a href="/skills/c/dev">开发与编程</a></td><td></td><td>17,691</td><td>10.9%</td></tr><tr><td><a href="/skills/c/data">数据与 AI</a></td><td></td><td>14,457</td><td>8.9%</td></tr><tr><td><a href="/skills/c/content">内容与媒体</a></td><td></td><td>11,275</td><td>6.9%</td></tr><tr><td><a href="/skills/c/devops">运维与 CI/CD</a></td><td></td><td>10,453</td><td>6.4%</td></tr><tr><td><a href="/skills/c/research">研究与分析</a></td><td></td><td>7,990</td><td>4.9%</td></tr><tr><td><a href="/skills/c/business">商业与运营</a></td><td></td><td>6,484</td><td>4.0%</td></tr><tr><td><a href="/skills/c/docs">文档与写作</a></td><td></td><td>4,657</td><td>2.9%</td></tr><tr><td><a href="/skills/c/db">数据库</a></td><td></td><td>3,282</td><td>2.0%</td></tr><tr><td><a href="/skills/c/life">生活与效率</a></td><td></td><td>3,187</td><td>2.0%</td></tr><tr><td><a href="/skills/c/web3">区块链与 Web3</a></td><td></td><td>760</td><td>0.5%</td></tr></tbody></table>
+<table class="sk-report-table"><thead><tr><th>分类</th><th></th><th>数量</th><th>占比</th></tr></thead><tbody><tr><td>其他</td><td></td><td>62,344</td><td>38.3%</td></tr><tr><td><a href="/skills/c/security">测试与安全</a></td><td></td><td>20,137</td><td>12.4%</td></tr><tr><td><a href="/skills/c/dev">开发与编程</a></td><td></td><td>17,785</td><td>10.9%</td></tr><tr><td><a href="/skills/c/data">数据与 AI</a></td><td></td><td>14,477</td><td>8.9%</td></tr><tr><td><a href="/skills/c/content">内容与媒体</a></td><td></td><td>11,329</td><td>7.0%</td></tr><tr><td><a href="/skills/c/devops">运维与 CI/CD</a></td><td></td><td>10,453</td><td>6.4%</td></tr><tr><td><a href="/skills/c/research">研究与分析</a></td><td></td><td>8,006</td><td>4.9%</td></tr><tr><td><a href="/skills/c/business">商业与运营</a></td><td></td><td>6,491</td><td>4.0%</td></tr><tr><td><a href="/skills/c/docs">文档与写作</a></td><td></td><td>4,669</td><td>2.9%</td></tr><tr><td><a href="/skills/c/db">数据库</a></td><td></td><td>3,283</td><td>2.0%</td></tr><tr><td><a href="/skills/c/life">生活与效率</a></td><td></td><td>3,194</td><td>2.0%</td></tr><tr><td><a href="/skills/c/web3">区块链与 Web3</a></td><td></td><td>760</td><td>0.5%</td></tr></tbody></table>
 <h2>高风险样本</h2>
 <ol class="sk-cards sk-ranked">
 <li class="sk-card"><span class="sk-rank">1</span>
 <a class="sk-card-title" href="/skills/anthropics-skills-skills-skill-creator">skill-creator</a>
 <p class="sk-card-desc">Create new skills, modify and improve existing skills, and measure skill performance. Use when users want to create a skill from scratch, edit, or optimize an existing skill, run evals to test a skill, benchmark skill performance with vari…</p>
-<p class="sk-card-meta">anthropics/skills · 165,365 Stars · 未声明许可证 · 更新 2026-07-24 · <span class="sk-flagged">数据外发</span></p></li>
+<p class="sk-card-meta">anthropics/skills · 165,405 Stars · 未声明许可证 · 更新 2026-07-24 · <span class="sk-flagged">数据外发</span></p></li>
 <li class="sk-card"><span class="sk-rank">2</span>
 <a class="sk-card-title" href="/skills/addyosmani-agent-skills-skills-browser-testing-with-devtools">browser-testing-with-devtools</a>
 <p class="sk-card-desc">Tests in real browsers via Chrome DevTools MCP. Use when building or debugging anything that runs in a browser. Use when you need to inspect the DOM, capture console errors, analyze network requests, profile performance, or verify visual o…</p>
-<p class="sk-card-meta">addyosmani/agent-skills · 81,077 Stars · MIT · 更新 2026-07-26 · <span class="sk-flagged">数据外发、提示词注入风险</span></p></li>
+<p class="sk-card-meta">addyosmani/agent-skills · 81,115 Stars · MIT · 更新 2026-07-26 · <span class="sk-flagged">数据外发、提示词注入风险</span></p></li>
 <li class="sk-card"><span class="sk-rank">3</span>
 <a class="sk-card-title" href="/skills/cherryhq-cherry-studio-resources-skills-skill-creator">skill-creator</a>
 <p class="sk-card-desc">Create new skills, modify and improve existing skills, and measure skill performance. Use when users want to create a skill from scratch, edit, or optimize an existing skill, run evals to test a skill, benchmark skill performance with vari…</p>
-<p class="sk-card-meta">CherryHQ/cherry-studio · 49,188 Stars · AGPL-3.0 · 更新 2026-07-31 · <span class="sk-flagged">数据外发</span></p></li>
+<p class="sk-card-meta">CherryHQ/cherry-studio · 49,204 Stars · AGPL-3.0 · 更新 2026-07-31 · <span class="sk-flagged">数据外发</span></p></li>
 <li class="sk-card"><span class="sk-rank">4</span>
 <a class="sk-card-title" href="/skills/sickn33-agentic-awesome-skills-plugins-agentic-awesome-skills-claude-skills-agent-evaluati">agent-evaluation</a>
 <p class="sk-card-desc">Testing and benchmarking LLM agents including behavioral testing, capability assessment, reliability metrics, and production monitoring—where even top agents achieve less than 50% on real-world benchmarks</p>
-<p class="sk-card-meta">sickn33/agentic-awesome-skills · 44,212 Stars · MIT · 更新 2026-07-31 · <span class="sk-flagged">提示词注入风险</span></p></li>
+<p class="sk-card-meta">sickn33/agentic-awesome-skills · 44,232 Stars · MIT · 更新 2026-07-31 · <span class="sk-flagged">提示词注入风险</span></p></li>
 <li class="sk-card"><span class="sk-rank">5</span>
 <a class="sk-card-title" href="/skills/sickn33-agentic-awesome-skills-plugins-agentic-awesome-skills-claude-skills-agentic-action">agentic-actions-auditor</a>
 <p class="sk-card-desc">Audits GitHub Actions workflows for security vulnerabilities in AI agent integrations including Claude Code Action, Gemini CLI, OpenAI Codex, and GitHub AI Inference. Detects attack vectors where attacker-controlled input reaches. AI agent…</p>
-<p class="sk-card-meta">sickn33/agentic-awesome-skills · 44,212 Stars · MIT · 更新 2026-07-31 · <span class="sk-flagged">数据外发</span></p></li>
+<p class="sk-card-meta">sickn33/agentic-awesome-skills · 44,232 Stars · MIT · 更新 2026-07-31 · <span class="sk-flagged">数据外发</span></p></li>
 <li class="sk-card"><span class="sk-rank">6</span>
 <a class="sk-card-title" href="/skills/sickn33-agentic-awesome-skills-plugins-agentic-awesome-skills-claude-skills-ai-product">ai-product</a>
 <p class="sk-card-desc">Every product will be AI-powered. The question is whether you'll build it right or ship a demo that falls apart in production.</p>
-<p class="sk-card-meta">sickn33/agentic-awesome-skills · 44,212 Stars · MIT · 更新 2026-07-31 · <span class="sk-flagged">提示词注入风险</span></p></li>
+<p class="sk-card-meta">sickn33/agentic-awesome-skills · 44,232 Stars · MIT · 更新 2026-07-31 · <span class="sk-flagged">提示词注入风险</span></p></li>
 <li class="sk-card"><span class="sk-rank">7</span>
 <a class="sk-card-title" href="/skills/sickn33-agentic-awesome-skills-skills-audit-skills">audit-skills</a>
 <p class="sk-card-desc">Expert security auditor for AI Skills and Bundles. Performs non-intrusive static analysis to identify malicious patterns, data leaks, system stability risks, and obfuscated payloads across Windows, macOS, Linux/Unix, and Mobile (Android/iO…</p>
-<p class="sk-card-meta">sickn33/agentic-awesome-skills · 44,212 Stars · MIT · 更新 2026-07-31 · <span class="sk-flagged">高危删除命令、数据外发</span></p></li>
+<p class="sk-card-meta">sickn33/agentic-awesome-skills · 44,232 Stars · MIT · 更新 2026-07-31 · <span class="sk-flagged">高危删除命令、数据外发</span></p></li>
 <li class="sk-card"><span class="sk-rank">8</span>
 <a class="sk-card-title" href="/skills/sickn33-agentic-awesome-skills-plugins-agentic-awesome-skills-claude-skills-browser-testin">browser-testing-with-devtools</a>
 <p class="sk-card-desc">Test browser apps with Chrome DevTools MCP by inspecting live DOM, console logs, network traffic, screenshots, accessibility, and performance traces.</p>
-<p class="sk-card-meta">sickn33/agentic-awesome-skills · 44,212 Stars · MIT · 更新 2026-07-31 · <span class="sk-flagged">数据外发、提示词注入风险</span></p></li>
+<p class="sk-card-meta">sickn33/agentic-awesome-skills · 44,232 Stars · MIT · 更新 2026-07-31 · <span class="sk-flagged">数据外发、提示词注入风险</span></p></li>
 <li class="sk-card"><span class="sk-rank">9</span>
 <a class="sk-card-title" href="/skills/sickn33-agentic-awesome-skills-skills-claude-in-chrome-troubleshooting">claude-in-chrome-troubleshooting</a>
 <p class="sk-card-desc">Diagnose and fix Claude in Chrome MCP extension connectivity issues. Use when mcp__claude-in-chrome__* tools fail, return &quot;Browser extension is not connected&quot;, or behave erratically.</p>
-<p class="sk-card-meta">sickn33/agentic-awesome-skills · 44,212 Stars · MIT · 更新 2026-07-31 · <span class="sk-flagged">高危删除命令</span></p></li>
+<p class="sk-card-meta">sickn33/agentic-awesome-skills · 44,232 Stars · MIT · 更新 2026-07-31 · <span class="sk-flagged">高危删除命令</span></p></li>
 <li class="sk-card"><span class="sk-rank">10</span>
 <a class="sk-card-title" href="/skills/sickn33-agentic-awesome-skills-plugins-agentic-awesome-skills-claude-skills-cloud-penetrat">cloud-penetration-testing</a>
 <p class="sk-card-desc">Conduct comprehensive security assessments of cloud infrastructure across Microsoft Azure, Amazon Web Services (AWS), and Google Cloud Platform (GCP).</p>
-<p class="sk-card-meta">sickn33/agentic-awesome-skills · 44,212 Stars · MIT · 更新 2026-07-31 · <span class="sk-flagged">数据外发</span></p></li>
+<p class="sk-card-meta">sickn33/agentic-awesome-skills · 44,232 Stars · MIT · 更新 2026-07-31 · <span class="sk-flagged">数据外发</span></p></li>
 <li class="sk-card"><span class="sk-rank">11</span>
 <a class="sk-card-title" href="/skills/sickn33-agentic-awesome-skills-plugins-agentic-awesome-skills-claude-skills-cloudflare-sec">cloudflare-security-audit</a>
 <p class="sk-card-desc">Audit authorized codebases for exploitable vulnerabilities using scoped reconnaissance, adversarial review, validation, and structured reporting.</p>
-<p class="sk-card-meta">sickn33/agentic-awesome-skills · 44,212 Stars · MIT · 更新 2026-07-31 · <span class="sk-flagged">数据外发</span></p></li>
+<p class="sk-card-meta">sickn33/agentic-awesome-skills · 44,232 Stars · MIT · 更新 2026-07-31 · <span class="sk-flagged">数据外发</span></p></li>
 <li class="sk-card"><span class="sk-rank">12</span>
 <a class="sk-card-title" href="/skills/sickn33-agentic-awesome-skills-plugins-agentic-awesome-skills-claude-skills-effective-agen">effective-agent-skills</a>
 <p class="sk-card-desc">Author and review high-quality agent skills with triggers, progressive disclosure, and safety notes.</p>
-<p class="sk-card-meta">sickn33/agentic-awesome-skills · 44,212 Stars · MIT · 更新 2026-07-31 · <span class="sk-flagged">数据外发、提示词注入风险</span></p></li>
+<p class="sk-card-meta">sickn33/agentic-awesome-skills · 44,232 Stars · MIT · 更新 2026-07-31 · <span class="sk-flagged">数据外发、提示词注入风险</span></p></li>
 <li class="sk-card"><span class="sk-rank">13</span>
 <a class="sk-card-title" href="/skills/sickn33-agentic-awesome-skills-plugins-agentic-awesome-skills-claude-skills-gcp-cloud-run">gcp-cloud-run</a>
 <p class="sk-card-desc">Specialized skill for building production-ready serverless applications on GCP. Covers Cloud Run services (containerized), Cloud Run Functions (event-driven), cold start optimization, and event-driven architecture with Pub/Sub.</p>
-<p class="sk-card-meta">sickn33/agentic-awesome-skills · 44,212 Stars · MIT · 更新 2026-07-31 · <span class="sk-flagged">高危删除命令</span></p></li>
+<p class="sk-card-meta">sickn33/agentic-awesome-skills · 44,232 Stars · MIT · 更新 2026-07-31 · <span class="sk-flagged">高危删除命令</span></p></li>
 <li class="sk-card"><span class="sk-rank">14</span>
 <a class="sk-card-title" href="/skills/sickn33-agentic-awesome-skills-plugins-agentic-awesome-skills-claude-skills-git-pr-review">git-pr-review</a>
 <p class="sk-card-desc">Generate a concise and structured PR description from commit history with minimal token usage</p>
-<p class="sk-card-meta">sickn33/agentic-awesome-skills · 44,212 Stars · MIT · 更新 2026-07-31 · <span class="sk-flagged">提示词注入风险</span></p></li>
+<p class="sk-card-meta">sickn33/agentic-awesome-skills · 44,232 Stars · MIT · 更新 2026-07-31 · <span class="sk-flagged">提示词注入风险</span></p></li>
 <li class="sk-card"><span class="sk-rank">15</span>
 <a class="sk-card-title" href="/skills/sickn33-agentic-awesome-skills-plugins-agentic-awesome-skills-claude-skills-idor-testing">idor-testing</a>
 <p class="sk-card-desc">Provide systematic methodologies for identifying and exploiting Insecure Direct Object Reference (IDOR) vulnerabilities in web applications.</p>
-<p class="sk-card-meta">sickn33/agentic-awesome-skills · 44,212 Stars · MIT · 更新 2026-07-31 · <span class="sk-flagged">数据外发</span></p></li>
+<p class="sk-card-meta">sickn33/agentic-awesome-skills · 44,232 Stars · MIT · 更新 2026-07-31 · <span class="sk-flagged">数据外发</span></p></li>
 <li class="sk-card"><span class="sk-rank">16</span>
 <a class="sk-card-title" href="/skills/sickn33-agentic-awesome-skills-plugins-agentic-awesome-skills-claude-skills-quit-sponsor">quit-sponsor</a>
 <p class="sk-card-desc">Helps an AI agent provide non-judgmental, evidence-informed quit-smoking support with user-consented tracking, craving check-ins, and escalation to human or clinical help. Not medical care.</p>
-<p class="sk-card-meta">sickn33/agentic-awesome-skills · 44,212 Stars · MIT · 更新 2026-07-31 · <span class="sk-flagged">数据外发</span></p></li>
+<p class="sk-card-meta">sickn33/agentic-awesome-skills · 44,232 Stars · MIT · 更新 2026-07-31 · <span class="sk-flagged">数据外发</span></p></li>
 <li class="sk-card"><span class="sk-rank">17</span>
 <a class="sk-card-title" href="/skills/sickn33-agentic-awesome-skills-plugins-agentic-awesome-skills-claude-skills-rclone-cli">rclone-cli</a>
 <p class="sk-card-desc">Rclone command-line cloud storage manager reference and usage guide. Use this skill whenever the user mentions rclone, or any task involving terminal-based cloud file operations such as upload, download, sync, copy, move, mount, or remote…</p>
-<p class="sk-card-meta">sickn33/agentic-awesome-skills · 44,212 Stars · MIT · 更新 2026-07-31 · <span class="sk-flagged">远程脚本直接执行</span></p></li>
+<p class="sk-card-meta">sickn33/agentic-awesome-skills · 44,232 Stars · MIT · 更新 2026-07-31 · <span class="sk-flagged">远程脚本直接执行</span></p></li>
 <li class="sk-card"><span class="sk-rank">18</span>
 <a class="sk-card-title" href="/skills/sickn33-agentic-awesome-skills-plugins-agentic-awesome-skills-claude-skills-red-team-tacti">red-team-tactics</a>
 <p class="sk-card-desc">Red team tactics principles based on MITRE ATT&amp;CK. Attack phases, detection evasion, reporting.</p>
-<p class="sk-card-meta">sickn33/agentic-awesome-skills · 44,212 Stars · MIT · 更新 2026-07-31 · <span class="sk-flagged">数据外发</span></p></li>
+<p class="sk-card-meta">sickn33/agentic-awesome-skills · 44,232 Stars · MIT · 更新 2026-07-31 · <span class="sk-flagged">数据外发</span></p></li>
 <li class="sk-card"><span class="sk-rank">19</span>
 <a class="sk-card-title" href="/skills/sickn33-agentic-awesome-skills-plugins-agentic-awesome-skills-claude-skills-skill-audit">skill-audit</a>
 <p class="sk-card-desc">Pre-install security scanner for AI agent skills. 7.5% of 14,706 skills are malicious. Audit before you trust.</p>
-<p class="sk-card-meta">sickn33/agentic-awesome-skills · 44,212 Stars · MIT · 更新 2026-07-31 · <span class="sk-flagged">提示词注入风险</span></p></li>
+<p class="sk-card-meta">sickn33/agentic-awesome-skills · 44,232 Stars · MIT · 更新 2026-07-31 · <span class="sk-flagged">提示词注入风险</span></p></li>
 <li class="sk-card"><span class="sk-rank">20</span>
 <a class="sk-card-title" href="/skills/sickn33-agentic-awesome-skills-plugins-agentic-awesome-skills-claude-skills-skill-scanner">skill-scanner</a>
 <p class="sk-card-desc">Scan agent skills for security issues before adoption. Detects prompt injection, malicious code, excessive permissions, secret exposure, and supply chain risks.</p>
-<p class="sk-card-meta">sickn33/agentic-awesome-skills · 44,212 Stars · MIT · 更新 2026-07-31 · <span class="sk-flagged">数据外发</span></p></li>
+<p class="sk-card-meta">sickn33/agentic-awesome-skills · 44,232 Stars · MIT · 更新 2026-07-31 · <span class="sk-flagged">数据外发</span></p></li>
 </ol>
 </section>
 </main>

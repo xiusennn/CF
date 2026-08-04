@@ -1873,7 +1873,7 @@ export const SYNCED_FREE_LLM_PROVIDERS = [
   }
 ];
 export const FREE_LLM_SYNC_META = {
-  "generatedAt": "2026-08-04T03:38:13.274Z",
+  "generatedAt": "2026-08-04T09:09:01.684Z",
   "sources": [
     {
       "repo": "mnfst/awesome-free-llm-apis",

@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-06T09:07:20.651Z",
+  "generatedAt": "2026-08-06T14:35:46.356Z",
   "sources": [
     {
       "repo": "mnfst/awesome-free-llm-apis",
@@ -10,8 +10,8 @@
     {
       "repo": "cheahjs/free-llm-api-resources",
       "path": "README.md",
-      "status": "ok",
-      "count": 26
+      "status": "error",
+      "error": "Error: 404"
     },
     {
       "repo": "nejib1/Free-LLM",
@@ -32,5 +32,5 @@
       "count": 0
     }
   ],
-  "count": 63
+  "count": 41
 }

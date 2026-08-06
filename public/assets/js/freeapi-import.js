@@ -1388,270 +1388,6 @@ export const SYNCED_FREE_LLM_PROVIDERS = [
     "source": "mnfst/awesome-free-llm-apis"
   },
   {
-    "name": "OpenRouter",
-    "url": "https://openrouter.ai",
-    "type": "限速免费",
-    "region": "待确认",
-    "auth": "见官网",
-    "models": "见官网",
-    "limits": "**",
-    "note": "自动同步自 cheahjs/free-llm-api-resources，请以官方页面为准。",
-    "source": "cheahjs/free-llm-api-resources"
-  },
-  {
-    "name": "Google AI Studio",
-    "url": "https://aistudio.google.com",
-    "type": "限速免费",
-    "region": "待确认",
-    "auth": "见官网",
-    "models": "见官网",
-    "limits": "</th></tr></thead><tbody>",
-    "note": "自动同步自 cheahjs/free-llm-api-resources，请以官方页面为准。",
-    "source": "cheahjs/free-llm-api-resources"
-  },
-  {
-    "name": "Mistral (La Plateforme)",
-    "url": "https://console.mistral.ai/",
-    "type": "限速免费",
-    "region": "待确认",
-    "auth": "见官网",
-    "models": "见官网",
-    "limits": "** Set per-model and per-organization — check [your limits page](https://admin.mistral.ai/plateforme/limits). As of July 2026 a new free account sees anywhere f",
-    "note": "自动同步自 cheahjs/free-llm-api-resources，请以官方页面为准。",
-    "source": "cheahjs/free-llm-api-resources"
-  },
-  {
-    "name": "Mistral (Codestral)",
-    "url": "https://codestral.mistral.ai/",
-    "type": "试用 Token / 注册赠送额度",
-    "region": "待确认",
-    "auth": "见官网",
-    "models": "见官网",
-    "limits": "** 30 requests/minute, 2,000 requests/day",
-    "note": "自动同步自 cheahjs/free-llm-api-resources，请以官方页面为准。",
-    "source": "cheahjs/free-llm-api-resources"
-  },
-  {
-    "name": "HuggingFace Inference Providers",
-    "url": "https://huggingface.co/docs/inference-providers/en/index",
-    "type": "试用 Token / 注册赠送额度",
-    "region": "待确认",
-    "auth": "见官网",
-    "models": "见官网",
-    "limits": "ed to models smaller than 10GB. Some popular models are supported even if they exceed 10GB.",
-    "note": "自动同步自 cheahjs/free-llm-api-resources，请以官方页面为准。",
-    "source": "cheahjs/free-llm-api-resources"
-  },
-  {
-    "name": "Vercel AI Gateway",
-    "url": "https://vercel.com/docs/ai-gateway",
-    "type": "限速免费",
-    "region": "待确认",
-    "auth": "见官网",
-    "models": "见官网",
-    "limits": ".",
-    "note": "自动同步自 cheahjs/free-llm-api-resources，请以官方页面为准。",
-    "source": "cheahjs/free-llm-api-resources"
-  },
-  {
-    "name": "Kilo Gateway",
-    "url": "https://kilo.ai/docs/gateway",
-    "type": "限速免费",
-    "region": "待确认",
-    "auth": "见官网",
-    "models": "见官网",
-    "limits": "** [200 requests/hour per IP, shared across all free models](https://kilo.ai/docs/gateway/usage-and-billing#rate-limiting)",
-    "note": "自动同步自 cheahjs/free-llm-api-resources，请以官方页面为准。",
-    "source": "cheahjs/free-llm-api-resources"
-  },
-  {
-    "name": "OpenCode Zen",
-    "url": "https://opencode.ai/docs/zen/",
-    "type": "限速免费",
-    "region": "待确认",
-    "auth": "见官网",
-    "models": "见官网",
-    "limits": "</th></tr></thead><tbody>",
-    "note": "自动同步自 cheahjs/free-llm-api-resources，请以官方页面为准。",
-    "source": "cheahjs/free-llm-api-resources"
-  },
-  {
-    "name": "Groq",
-    "url": "https://console.groq.com",
-    "type": "限速免费",
-    "region": "待确认",
-    "auth": "见官网",
-    "models": "见官网",
-    "limits": "</th></tr></thead><tbody>",
-    "note": "自动同步自 cheahjs/free-llm-api-resources，请以官方页面为准。",
-    "source": "cheahjs/free-llm-api-resources"
-  },
-  {
-    "name": "Cohere",
-    "url": "https://cohere.com",
-    "type": "限速免费",
-    "region": "待确认",
-    "auth": "见官网",
-    "models": "见官网",
-    "limits": "**",
-    "note": "自动同步自 cheahjs/free-llm-api-resources，请以官方页面为准。",
-    "source": "cheahjs/free-llm-api-resources"
-  },
-  {
-    "name": "Cloudflare Workers AI",
-    "url": "https://developers.cloudflare.com/workers-ai",
-    "type": "限速免费",
-    "region": "待确认",
-    "auth": "见官网",
-    "models": "见官网",
-    "limits": "** [10,000 neurons/day](https://developers.cloudflare.com/workers-ai/platform/pricing/#free-allocation)",
-    "note": "自动同步自 cheahjs/free-llm-api-resources，请以官方页面为准。",
-    "source": "cheahjs/free-llm-api-resources"
-  },
-  {
-    "name": "Fireworks",
-    "url": "https://fireworks.ai/",
-    "type": "试用 Token / 注册赠送额度",
-    "region": "待确认",
-    "auth": "见官网",
-    "models": "见官网",
-    "limits": "** $1",
-    "note": "自动同步自 cheahjs/free-llm-api-resources，请以官方页面为准。",
-    "source": "cheahjs/free-llm-api-resources"
-  },
-  {
-    "name": "Baseten",
-    "url": "https://app.baseten.co/",
-    "type": "试用 Token / 注册赠送额度",
-    "region": "待确认",
-    "auth": "见官网",
-    "models": "见官网",
-    "limits": "** $30",
-    "note": "自动同步自 cheahjs/free-llm-api-resources，请以官方页面为准。",
-    "source": "cheahjs/free-llm-api-resources"
-  },
-  {
-    "name": "Nebius",
-    "url": "https://tokenfactory.nebius.com/",
-    "type": "试用 Token / 注册赠送额度",
-    "region": "待确认",
-    "auth": "见官网",
-    "models": "见官网",
-    "limits": "** $1",
-    "note": "自动同步自 cheahjs/free-llm-api-resources，请以官方页面为准。",
-    "source": "cheahjs/free-llm-api-resources"
-  },
-  {
-    "name": "Novita",
-    "url": "https://novita.ai/?ref=ytblmjc&utm_source=affiliate",
-    "type": "试用 Token / 注册赠送额度",
-    "region": "待确认",
-    "auth": "见官网",
-    "models": "见官网",
-    "limits": "** $0.5 for 1 year",
-    "note": "自动同步自 cheahjs/free-llm-api-resources，请以官方页面为准。",
-    "source": "cheahjs/free-llm-api-resources"
-  },
-  {
-    "name": "AI21",
-    "url": "https://studio.ai21.com/",
-    "type": "试用 Token / 注册赠送额度",
-    "region": "待确认",
-    "auth": "见官网",
-    "models": "见官网",
-    "limits": "** $10 for 3 months",
-    "note": "自动同步自 cheahjs/free-llm-api-resources，请以官方页面为准。",
-    "source": "cheahjs/free-llm-api-resources"
-  },
-  {
-    "name": "Upstage",
-    "url": "https://console.upstage.ai/",
-    "type": "试用 Token / 注册赠送额度",
-    "region": "待确认",
-    "auth": "见官网",
-    "models": "见官网",
-    "limits": "** $10 for 3 months",
-    "note": "自动同步自 cheahjs/free-llm-api-resources，请以官方页面为准。",
-    "source": "cheahjs/free-llm-api-resources"
-  },
-  {
-    "name": "NLP Cloud",
-    "url": "https://nlpcloud.com/home",
-    "type": "试用 Token / 注册赠送额度",
-    "region": "待确认",
-    "auth": "见官网",
-    "models": "见官网",
-    "limits": "** $15",
-    "note": "自动同步自 cheahjs/free-llm-api-resources，请以官方页面为准。",
-    "source": "cheahjs/free-llm-api-resources"
-  },
-  {
-    "name": "Alibaba Cloud (International) Model Studio",
-    "url": "https://bailian.console.alibabacloud.com/",
-    "type": "试用 Token / 注册赠送额度",
-    "region": "待确认",
-    "auth": "见官网",
-    "models": "见官网",
-    "limits": "** 1 million tokens/model, valid for 90 days (Singapore endpoint only)",
-    "note": "自动同步自 cheahjs/free-llm-api-resources，请以官方页面为准。",
-    "source": "cheahjs/free-llm-api-resources"
-  },
-  {
-    "name": "Modal",
-    "url": "https://modal.com",
-    "type": "试用 Token / 注册赠送额度",
-    "region": "待确认",
-    "auth": "见官网",
-    "models": "见官网",
-    "limits": "** $30/month on the Starter plan",
-    "note": "自动同步自 cheahjs/free-llm-api-resources，请以官方页面为准。",
-    "source": "cheahjs/free-llm-api-resources"
-  },
-  {
-    "name": "Inference.net",
-    "url": "https://inference.net",
-    "type": "试用 Token / 注册赠送额度",
-    "region": "待确认",
-    "auth": "见官网",
-    "models": "见官网",
-    "limits": "** $1, $25 on responding to email survey",
-    "note": "自动同步自 cheahjs/free-llm-api-resources，请以官方页面为准。",
-    "source": "cheahjs/free-llm-api-resources"
-  },
-  {
-    "name": "Hyperbolic",
-    "url": "https://app.hyperbolic.ai/",
-    "type": "试用 Token / 注册赠送额度",
-    "region": "待确认",
-    "auth": "见官网",
-    "models": "见官网",
-    "limits": "** $1",
-    "note": "自动同步自 cheahjs/free-llm-api-resources，请以官方页面为准。",
-    "source": "cheahjs/free-llm-api-resources"
-  },
-  {
-    "name": "SambaNova Cloud",
-    "url": "https://cloud.sambanova.ai/",
-    "type": "试用 Token / 注册赠送额度",
-    "region": "待确认",
-    "auth": "见官网",
-    "models": "见官网",
-    "limits": "** $5 for 3 months",
-    "note": "自动同步自 cheahjs/free-llm-api-resources，请以官方页面为准。",
-    "source": "cheahjs/free-llm-api-resources"
-  },
-  {
-    "name": "Scaleway Generative APIs",
-    "url": "https://console.scaleway.com/generative-api/models",
-    "type": "试用 Token / 注册赠送额度",
-    "region": "待确认",
-    "auth": "见官网",
-    "models": "见官网",
-    "limits": "** 1,000,000 free tokens, plus 60 minutes of audio transcription",
-    "note": "自动同步自 cheahjs/free-llm-api-resources，请以官方页面为准。",
-    "source": "cheahjs/free-llm-api-resources"
-  },
-  {
     "name": "ChatAnywhere",
     "url": "https://chatanywhere.tech",
     "type": "限速免费",
@@ -1674,6 +1410,17 @@ export const SYNCED_FREE_LLM_PROVIDERS = [
     "source": "for-the-zero/Free-LLM-Collection"
   },
   {
+    "name": "OpenRouter",
+    "url": "https://openrouter.ai",
+    "type": "限速免费",
+    "region": "待确认",
+    "auth": "见官网",
+    "models": "见官网",
+    "limits": "** 20 RPM / 200 RPD (each model)",
+    "note": "自动同步自 for-the-zero/Free-LLM-Collection，请以官方页面为准。",
+    "source": "for-the-zero/Free-LLM-Collection"
+  },
+  {
     "name": "书生 / Intern AI",
     "url": "https://chat.intern-ai.org.cn",
     "type": "限速免费",
@@ -1681,6 +1428,17 @@ export const SYNCED_FREE_LLM_PROVIDERS = [
     "auth": "见官网",
     "models": "见官网",
     "limits": "** 10 RPM",
+    "note": "自动同步自 for-the-zero/Free-LLM-Collection，请以官方页面为准。",
+    "source": "for-the-zero/Free-LLM-Collection"
+  },
+  {
+    "name": "Google Gemini",
+    "url": "https://aistudio.google.com",
+    "type": "限速免费",
+    "region": "待确认",
+    "auth": "见官网",
+    "models": "见官网",
+    "limits": "** 5 RPM / 20 RPD",
     "note": "自动同步自 for-the-zero/Free-LLM-Collection，请以官方页面为准。",
     "source": "for-the-zero/Free-LLM-Collection"
   },
@@ -1873,7 +1631,7 @@ export const SYNCED_FREE_LLM_PROVIDERS = [
   }
 ];
 export const FREE_LLM_SYNC_META = {
-  "generatedAt": "2026-08-06T09:07:20.649Z",
+  "generatedAt": "2026-08-06T14:35:46.353Z",
   "sources": [
     {
       "repo": "mnfst/awesome-free-llm-apis",
@@ -1884,8 +1642,8 @@ export const FREE_LLM_SYNC_META = {
     {
       "repo": "cheahjs/free-llm-api-resources",
       "path": "README.md",
-      "status": "ok",
-      "count": 26
+      "status": "error",
+      "error": "Error: 404"
     },
     {
       "repo": "nejib1/Free-LLM",
